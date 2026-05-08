@@ -33,16 +33,16 @@ export default function GallerySection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#1a0408_0%,#4a0f18_50%,#2c0610_100%)] py-24 md:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#1a0408_0%,#2c0710_50%,#0a1a0d_100%)] py-24 md:py-32"
     >
       {/* Background Ornaments */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-[#C9A227]/5 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-[#d81b3f]/10 blur-[100px]" />
+        <div className="absolute left-1/2 top-0 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-secondary/10 blur-[100px]" />
 
         {/* Subtle grid pattern for premium modern feel */}
         <div className="absolute inset-0 opacity-[0.03] mix-blend-screen"
-          style={{ backgroundImage: `linear-gradient(rgba(201,162,39,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+          style={{ backgroundImage: `linear-gradient(rgba(142,28,63,1) 1px, transparent 1px), linear-gradient(90deg, rgba(142,28,63,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
       </div>
 
       <div className="relative z-10 mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -51,21 +51,16 @@ export default function GallerySection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#C9A227]/30 bg-[#2c0710]/50 px-5 py-2 backdrop-blur-md">
-            <Sparkles className="h-4 w-4 text-[#C9A227]" />
-            <span className="text-xs uppercase tracking-[0.3em] font-medium text-[#C9A227]">
-              Without Words
-            </span>
-          </div>
 
-          <h2 className="font-serif text-5xl font-light tracking-wide text-[#f5e6c8] md:text-7xl">
-            Our <span className="italic text-[#C9A227]">Gallery</span>
+
+          <h2 className="font-serif text-5xl font-light tracking-wide text-white md:text-7xl">
+            Our <span className="italic text-primary">Gallery</span>
           </h2>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/60" />
-            <Heart size={14} className="text-[#C9A227] fill-[#C9A227]/20" />
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/60" />
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-primary/60" />
+            <Heart size={14} className="text-primary fill-primary/20" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-primary/60" />
           </div>
         </motion.div>
       </div>
@@ -91,12 +86,12 @@ export default function GallerySection() {
             {duplicatedItems.map((item, index) => (
               <motion.div
                 key={index}
-                className={`group relative shrink-0 overflow-hidden rounded-[2.5rem] border border-[#C9A227]/20 bg-[#1a0408] shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${item.width} ${item.height} ${item.yOffset}`}
+                className={`group relative shrink-0 overflow-hidden rounded-[2.5rem] border border-primary/20 bg-[#1a0408] shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${item.width} ${item.height} ${item.yOffset}`}
                 whileHover={{ scale: 1.05, y: -10, zIndex: 50 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                {/* Premium Golden Inner Frame */}
-                <div className="absolute inset-4 z-20 rounded-[1.8rem] border border-[#C9A227]/30 transition-all duration-500 group-hover:border-[#C9A227]/80 group-hover:scale-[0.98]" />
+                {/* Premium Inner Frame */}
+                <div className="absolute inset-4 z-20 rounded-[1.8rem] border border-primary/30 transition-all duration-500 group-hover:border-primary/80 group-hover:scale-[0.98]" />
 
                 {/* Image Element */}
                 <Image
@@ -128,7 +123,7 @@ export default function GallerySection() {
           initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.3 }}
-          className="font-serif text-xl italic text-[#f5e6c8]/60 md:text-2xl"
+          className="font-serif text-xl italic text-white/60 md:text-2xl"
         >
           Some moments are too beautiful for words.
         </motion.p>

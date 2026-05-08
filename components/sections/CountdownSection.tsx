@@ -18,7 +18,7 @@ export default function CountdownSection() {
     triggerOnce: true,
   });
 
-  const targetDate = useMemo(() => new Date('2026-05-30T10:30:00').getTime(), []);
+  const targetDate = useMemo(() => new Date('2026-07-27T08:30:00').getTime(), []);
 
   const getTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();
@@ -65,19 +65,19 @@ export default function CountdownSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff8ee_0%,#fff2df_45%,#fbe8d4_100%)] px-4 py-24 sm:px-6 lg:px-8 md:py-32"
+      className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:px-8 md:py-32"
     >
       {/* Premium Atmosphere */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ x: [0, 60, 0], y: [0, 30, 0], scale: [1, 1.12, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -left-[12%] top-[-8%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-br from-[#f9c9d2] to-[#ffe9c7] opacity-70 blur-[110px]"
+          className="absolute -left-[12%] top-[-8%] h-[50vw] w-[50vw] rounded-full bg-gradient-to-br from-[#f9c9d2] to-[#e8f3e8] opacity-70 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, -45, 0], y: [0, -45, 0], scale: [1, 1.18, 1] }}
           transition={{ duration: 19, repeat: Infinity, ease: 'easeInOut', delay: 1.8 }}
-          className="absolute -right-[10%] top-[32%] h-[42vw] w-[42vw] rounded-full bg-gradient-to-tl from-[#e8dafd] to-[#fde3eb] opacity-60 blur-[110px]"
+          className="absolute -right-[10%] top-[32%] h-[42vw] w-[42vw] rounded-full bg-gradient-to-tl from-[#fdf2f4] to-[#f0f9f0] opacity-60 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, 24, 0], y: [0, -35, 0] }}
@@ -89,7 +89,7 @@ export default function CountdownSection() {
           className="absolute inset-0 opacity-[0.18]"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 12px 12px, rgba(185,127,86,0.35) 1px, transparent 1px)',
+              'radial-gradient(circle at 12px 12px, var(--secondary) 1px, transparent 1px)',
             backgroundSize: '36px 36px',
           }}
         />
@@ -100,7 +100,7 @@ export default function CountdownSection() {
         {floatingHearts.map((heart) => (
           <motion.div
             key={heart.id}
-            className="absolute text-[#c9788a]/40"
+            className="absolute text-secondary/30"
             style={{ left: heart.left, top: heart.top }}
             animate={{
               y: [0, -90, 0],
@@ -116,7 +116,7 @@ export default function CountdownSection() {
               ease: 'easeInOut',
             }}
           >
-            <Heart size={heart.size} fill="currentColor" />
+            <Sparkles size={heart.size} fill="currentColor" />
           </motion.div>
         ))}
       </div>
@@ -130,17 +130,17 @@ export default function CountdownSection() {
         >
           <motion.div
             whileHover={{ scale: 1.04 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#dca86f]/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(214,153,107,0.18)] backdrop-blur-md"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-secondary/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(46,90,49,0.1)] backdrop-blur-md"
           >
-            <Sparkles className="h-4 w-4 text-[#bf7a4e]" />
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#bf7a4e] sm:text-sm">
+            <Sparkles className="h-4 w-4 text-secondary" />
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-secondary sm:text-sm">
               The Big Day Approaches
             </span>
-            <Sparkles className="h-4 w-4 text-[#bf7a4e]" />
+            <Sparkles className="h-4 w-4 text-secondary" />
           </motion.div>
 
-          <h2 className="font-serif text-4xl font-medium tracking-tight text-[#4a332f] sm:text-5xl md:text-7xl">
-            Counting Down to <span className="relative inline-block text-[#bd6f56]">
+          <h2 className="font-serif text-4xl font-medium tracking-tight text-[#1A1A1A] sm:text-5xl md:text-7xl">
+            Counting Down to <span className="relative inline-block text-secondary">
               Forever
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
                 viewBox="0 0 100 20" preserveAspectRatio="none"
@@ -151,7 +151,7 @@ export default function CountdownSection() {
                 <motion.path
                   d="M0 10 Q 25 20, 50 10 T 100 10"
                   fill="none"
-                  stroke="#d79c74"
+                  stroke="var(--green-accent)"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
@@ -159,12 +159,12 @@ export default function CountdownSection() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#7a5f57] sm:text-lg">
-            Every second brings us closer to our blessed wedding day. We cannot wait to celebrate this grace-filled moment with you.
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+            Every second brings us closer to our beautiful wedding day. We cannot wait to celebrate this special moment with you.
           </p>
         </motion.div>
 
-        <div className="rounded-[2rem] border border-[#e7c5a0]/40 bg-white/55 p-4 shadow-[0_20px_70px_rgba(177,120,84,0.18)] backdrop-blur-xl sm:p-6 md:p-8">
+        <div className="rounded-[2rem] border border-secondary/20 bg-white/55 p-4 shadow-[0_20px_70px_rgba(46,90,49,0.08)] backdrop-blur-xl sm:p-6 md:p-8">
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-6">
           {countdownItems.map((item, index) => (
             <motion.div
@@ -180,17 +180,17 @@ export default function CountdownSection() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-[1.8rem] border border-[#f1dfc9] bg-[linear-gradient(160deg,rgba(255,255,255,0.92)_0%,rgba(255,244,230,0.82)_100%)] p-5 shadow-[0_12px_30px_rgba(194,133,92,0.15)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(194,133,92,0.24)] md:p-7">
+              <div className="relative overflow-hidden rounded-[1.8rem] border border-secondary/10 bg-white/90 p-5 shadow-[0_12px_30px_rgba(46,90,49,0.05)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(46,90,49,0.12)] md:p-7">
                 <div className="absolute inset-0 opacity-[0.15]"
                   style={{
                     backgroundImage:
-                      'linear-gradient(rgba(216,150,103,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(216,150,103,0.5) 1px, transparent 1px)',
+                      'linear-gradient(rgba(46,90,49,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(46,90,49,0.2) 1px, transparent 1px)',
                     backgroundSize: '24px 24px',
                   }}
                 />
 
-                <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-[#dca57f]/40" />
-                <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-[#dca57f]/25" />
+                <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-secondary/20" />
+                <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-secondary/15" />
 
                 <div className="relative z-10 flex flex-col items-center justify-center text-center">
                   <div className="relative flex h-[64px] w-full items-center justify-center overflow-hidden sm:h-[78px] md:h-[96px]">
@@ -206,15 +206,15 @@ export default function CountdownSection() {
                           damping: 24,
                           mass: 1
                         }}
-                        className="absolute font-serif text-5xl font-semibold text-[#513933] drop-shadow-[0_2px_8px_rgba(121,80,59,0.25)] sm:text-6xl md:text-7xl"
+                        className="absolute font-serif text-5xl font-semibold text-[#1A1A1A] drop-shadow-[0_2px_8px_rgba(46,90,49,0.15)] sm:text-6xl md:text-7xl"
                       >
                         {String(item.value).padStart(2, '0')}
                       </motion.span>
                     </AnimatePresence>
                   </div>
 
-                  <div className="mt-3 rounded-full border border-[#e8c9aa] bg-white/75 px-3 py-1.5 shadow-sm md:mt-5">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#b67852] md:text-xs">
+                  <div className="mt-3 rounded-full border border-secondary/20 bg-white/75 px-3 py-1.5 shadow-sm md:mt-5">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-secondary md:text-xs">
                       {item.label}
                     </p>
                   </div>
@@ -231,10 +231,10 @@ export default function CountdownSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          <div className="flex items-center gap-3 text-[#bd6f56]">
+          <div className="flex items-center gap-3 text-secondary">
             <Stars size={14} className="animate-pulse" />
             <Heart size={15} className="animate-bounce" fill="currentColor" />
-            <span className="font-serif italic text-lg text-[#7c625a] sm:text-xl">
+            <span className="font-serif italic text-lg text-slate-700 sm:text-xl">
               Can't wait to see you there!
             </span>
             <Heart size={15} className="animate-bounce" fill="currentColor" style={{ animationDelay: '200ms' }} />

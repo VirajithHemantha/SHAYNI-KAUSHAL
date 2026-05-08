@@ -10,36 +10,36 @@ const storyItems = [
     id: 0,
     chapter: "Chapter I",
     title: "How We Met",
-    subtitle: "2012",
-    content: "We met in 2012, 14 years ago. What began as friendship slowly grew into deep love, trust, and a lifelong bond.",
+    subtitle: "2017",
+    content: "Our journey began in 2017, 9 years ago. What started as a simple meeting blossomed into a beautiful bond of love and understanding.",
     icon: Stars,
-    color: "#ff4d6d",
-    gradient: "from-[#ff4d6d]/10 to-[#ffb3c1]/20",
-    accentBg: "bg-[#ff4d6d]",
-    tag: "2012",
+    color: "#8E1C3F",
+    gradient: "from-[#8E1C3F]/10 to-[#AD1D45]/20",
+    accentBg: "bg-[#8E1C3F]",
+    tag: "2017",
   },
   {
     id: 1,
     chapter: "Chapter II",
-    title: "Years Together",
-    subtitle: "14 Years of Love",
-    content: "Over the years, we supported each other through every season of life. Today, with grateful hearts, we are ready to begin our forever as husband and wife.",
+    title: "The Journey",
+    subtitle: "9 Years of Memories",
+    content: "Through every season of life, we've grown together, supporting each other's dreams and building a foundation of trust and friendship.",
     icon: BookHeart,
-    color: "#c084fc",
-    gradient: "from-[#c084fc]/10 to-[#e9d5ff]/20",
-    accentBg: "bg-[#c084fc]",
-    tag: "Journey",
+    color: "#2E5A31",
+    gradient: "from-[#2E5A31]/10 to-[#3A6B35]/20",
+    accentBg: "bg-[#2E5A31]",
+    tag: "Growth",
   },
   {
     id: 2,
     chapter: "Chapter III",
     title: "The Promise",
-    subtitle: "A Sacred Yes",
-    content: "With prayer and joy, we said yes to this new chapter. Your love and blessings make this day even more meaningful.",
+    subtitle: "A Heartfelt Yes",
+    content: "With joy and certainty, we decided to walk hand in hand forever. Your presence and blessings make our commitment even more special.",
     icon: Camera,
-    color: "#f59e42",
-    gradient: "from-[#f59e42]/10 to-[#fde68a]/20",
-    accentBg: "bg-[#f59e42]",
+    color: "#AD1D45",
+    gradient: "from-[#AD1D45]/10 to-[#8E1C3F]/20",
+    accentBg: "bg-[#AD1D45]",
     tag: "Promise",
   },
   {
@@ -47,11 +47,11 @@ const storyItems = [
     chapter: "Chapter IV",
     title: "Forever Begins",
     subtitle: "Our Wedding Day",
-    content: "Now we celebrate our wedding day with the people we love. Thank you for being part of our story.",
+    content: "Today, we start our new chapter as husband and wife. Thank you for being a part of our beautiful story and celebration.",
     icon: PartyPopper,
-    color: "#10b981",
-    gradient: "from-[#10b981]/10 to-[#a7f3d0]/20",
-    accentBg: "bg-[#10b981]",
+    color: "#3A6B35",
+    gradient: "from-[#3A6B35]/10 to-[#2E5A31]/20",
+    accentBg: "bg-[#3A6B35]",
     tag: "Forever",
   },
 ];
@@ -81,18 +81,18 @@ export default function StorySection() {
   return (
     <section
       ref={ref}
-      className="relative px-4 sm:px-6 lg:px-8 py-16 md:py-20 overflow-hidden bg-[#faf7f2]"
+      className="relative px-4 sm:px-6 lg:px-8 py-10 md:py-20 overflow-hidden bg-white"
       style={{ minHeight: 'auto' }}
     >
       {/* ── Subtle background texture ── */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #ff8fa3 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #8E1C3F 1px, transparent 1px)`,
           backgroundSize: '36px 36px',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#faf7f2] via-transparent to-[#faf7f2] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white pointer-events-none" />
 
       {/* Decorative watermark shape */}
       <div className="absolute bottom-0 right-0 h-48 w-48 select-none rounded-full bg-[radial-gradient(circle,rgba(255,143,163,0.22),transparent_72%)] opacity-40 blur-sm md:h-72 md:w-72 pointer-events-none" />
@@ -107,16 +107,16 @@ export default function StorySection() {
           className="text-center mb-10 md:mb-12"
         >
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border-2 border-white shadow-md rounded-full px-5 py-2 mb-5">
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#ff8fa3]">Our Love Story</span>
-            <Heart className="w-4 h-4 text-[#ff8fa3] fill-[#ff8fa3]" />
+            <Heart className="w-4 h-4 text-primary fill-primary" />
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary">Our Love Story</span>
+            <Heart className="w-4 h-4 text-primary fill-primary" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#4a3b3c] leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1A1A1A] leading-tight">
             Written in the{' '}
-            <span className="italic text-[#ff4d6d] relative inline-block">
+            <span className="italic text-primary relative inline-block">
               Stars
               <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
-                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#ff8fa3" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#AD1D45" strokeWidth="2.5" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h2>
@@ -143,11 +143,11 @@ export default function StorySection() {
               >
                 <div
                   className="w-2 h-2 rounded-full shrink-0 transition-all"
-                  style={{ backgroundColor: active === i ? s.color : '#d1a0aa' }}
+                  style={{ backgroundColor: active === i ? s.color : '#cbd5e1' }}
                 />
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-wider text-[#c0a0a8]">{s.chapter}</p>
-                  <p className={`text-[11px] font-semibold leading-tight transition-colors ${active === i ? 'text-[#4a3b3c]' : 'text-[#9a7a7e]'}`}>
+                  <p className="text-[9px] font-bold uppercase tracking-wider text-slate-400">{s.chapter}</p>
+                  <p className={`text-[11px] font-semibold leading-tight transition-colors ${active === i ? 'text-[#1A1A1A]' : 'text-slate-500'}`}>
                     {s.title}
                   </p>
                 </div>
@@ -188,9 +188,9 @@ export default function StorySection() {
                   {/* Top row */}
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#c0a0a8]">{item.chapter}</span>
-                      <h3 className="font-serif text-3xl md:text-4xl text-[#4a3b3c] mt-1 leading-tight">{item.title}</h3>
-                      <p className="text-sm font-semibold text-[#9a7a7e] mt-1">{item.subtitle}</p>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">{item.chapter}</span>
+                      <h3 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mt-1 leading-tight">{item.title}</h3>
+                      <p className="text-sm font-semibold text-slate-500 mt-1">{item.subtitle}</p>
                     </div>
                     {/* Icon bubble */}
                     <div

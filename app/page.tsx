@@ -6,7 +6,8 @@ import HeroSection from '@/components/sections/HeroSection';
 import StorySection from '@/components/sections/StorySection';
 import CeremonyDetails from '@/components/sections/CeremonyDetails';
 import CountdownSection from '@/components/sections/CountdownSection';
-import GallerySection from '@/components/sections/GallerySection';
+import RingsDivider from '@/components/sections/RingsDivider';
+
 import VenueLocation from '@/components/sections/VenueLocation';
 import RSVPSection from '@/components/sections/RSVPSection';
 import BlessingsSection from '@/components/sections/BlessingsSection';
@@ -33,11 +34,19 @@ export default function Home() {
           <HeroSection />
           <StorySection />
           <CeremonyDetails />
+          
+          <RingsDivider />
           <CountdownSection />
-          <GallerySection />
+
+          <RingsDivider />
           <VenueLocation />
+          
+          <RingsDivider />
           <RSVPSection />
+          
+          <RingsDivider />
           <BlessingsSection />
+          
           <FooterSection />
         </>
       )}

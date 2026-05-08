@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
-import './enhancements.css'
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -16,12 +15,34 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'VIMUKTHI & PIUMI Wedding',
-  description: 'Join us as we celebrate the blessed Christian union of VIMUKTHI and PIUMI on May 30, 2026.',
+  title: 'Umayangana & Samudra Wedding',
+  description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
   generator: 'v0.app',
+  metadataBase: new URL('https://udayangani-samudra-weddinginvitatio.vercel.app'),
   icons: {
     icon: '/wedding-icon.png',
     apple: '/wedding-icon.png',
+  },
+  openGraph: {
+    title: 'Umayangana & Samudra Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
+    url: '/',
+    siteName: 'Umayangana & Samudra Wedding',
+    images: [
+      {
+        url: '/wedding-icon.png',
+        width: 640,
+        height: 640,
+        alt: 'Umayangana & Samudra Wedding',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Umayangana & Samudra Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
+    images: ['/wedding-icon.png'],
   },
 }
 

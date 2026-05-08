@@ -1,42 +1,42 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-/* Premium Sri Lankan Kandyan Wedding Theme */
+/* Premium White, Dark Pink & Green Wedding Theme */
 :root {
-  /* Primary Colors - Royal Maroon & Gold */
-  --maroon-dark: #7A1E1E;
-  --maroon-light: #A82C2C;
-  --gold-primary: #C9A227;
-  --gold-accent: #D4AF37;
-  --ivory: #F5E6C8;
-  --cream: #FAF6F0;
+  /* Primary Colors - Dark Pink & Forest Green */
+  --pink-dark: #8E1C3F;
+  --pink-light: #AD1D45;
+  --green-primary: #2E5A31;
+  --green-accent: #3A6B35;
+  --ivory: #FDFBFB;
+  --cream: #FFFFFF;
   --white: #FFFFFF;
   --text-dark: #1A1A1A;
-  --text-muted: #6B6B6B;
-  --border-light: #E8DCC8;
-  
+  --text-muted: #4B4B4B;
+  --border-light: #E5E7EB;
+
   /* Design System */
-  --background: var(--cream);
+  --background: var(--white);
   --foreground: var(--text-dark);
   --card: var(--white);
   --card-foreground: var(--text-dark);
   --popover: var(--ivory);
   --popover-foreground: var(--text-dark);
-  --primary: var(--maroon-dark);
+  --primary: var(--pink-dark);
   --primary-foreground: var(--white);
-  --secondary: var(--gold-primary);
-  --secondary-foreground: var(--text-dark);
+  --secondary: var(--green-primary);
+  --secondary-foreground: var(--white);
   --muted: var(--text-muted);
-  --muted-foreground: var(--ivory);
-  --accent: var(--maroon-light);
+  --muted-foreground: var(--pink-light);
+  --accent: var(--green-accent);
   --accent-foreground: var(--white);
   --destructive: #DC2626;
   --destructive-foreground: var(--white);
   --border: var(--border-light);
   --input: var(--white);
-  --ring: var(--gold-primary);
+  --ring: var(--pink-dark);
   --radius: 0.5rem;
 }
 
@@ -72,33 +72,38 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
-  
+
   h1 {
     @apply text-6xl md:text-7xl font-light leading-tight;
     color: var(--primary);
     font-weight: 300;
   }
-  
+
   h2 {
     @apply text-4xl md:text-5xl font-light leading-tight;
     color: var(--primary);
     font-weight: 300;
   }
-  
+
   h3 {
     @apply text-2xl md:text-3xl font-light leading-snug;
     color: var(--foreground);
     font-weight: 400;
   }
-  
+
   p {
     @apply text-foreground;
     text-wrap: pretty;
@@ -111,12 +116,15 @@
     opacity: 0;
     transform: translateY(0) translateX(0);
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(-100vh) translateX(var(--tx));
@@ -127,26 +135,33 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(201, 162, 39, 0.4);
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(142, 28, 63, 0.4);
   }
+
   50% {
-    box-shadow: 0 0 30px rgba(201, 162, 39, 0.7);
+    box-shadow: 0 0 30px rgba(142, 28, 63, 0.7);
   }
 }
 
-@keyframes glow-maroon {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(122, 30, 30, 0.3);
+@keyframes glow-pink {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(142, 28, 63, 0.3);
   }
+
   50% {
-    box-shadow: 0 0 30px rgba(122, 30, 30, 0.5);
+    box-shadow: 0 0 30px rgba(142, 28, 63, 0.5);
   }
 }
 
@@ -155,6 +170,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -162,16 +178,21 @@
 }
 
 @keyframes lotus-float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(-100vh) rotate(360deg);
     opacity: 0;
@@ -179,9 +200,12 @@
 }
 
 @keyframes pulse-soft {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -218,4 +242,36 @@
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+/* Enhanced Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+/* Placeholder Styling */
+::placeholder {
+  color: var(--light-gray);
+  opacity: 0.7;
+}
+
+/* Focus States for Accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Image Loading Styles */
+img {
+  max-width: 100%;
+  height: auto;
 }

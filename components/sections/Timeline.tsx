@@ -19,7 +19,7 @@ export default function Timeline() {
     {
       year: '2020-2025',
       title: 'Building Our Home',
-      description: 'Creating countless memories and adventures together',
+      description: 'Creating countless memories and adventures together', 25
       icon: '🏠',
     },
     {
@@ -52,7 +52,7 @@ export default function Timeline() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-6 bg-background overflow-hidden"
+      className="relative py-12 md:py-24 px-6 bg-background overflow-hidden"
     >
       <div className="max-w-3xl mx-auto">
         {/* Section title */}
@@ -64,13 +64,13 @@ export default function Timeline() {
         >
           <h2
             className="text-5xl font-serif font-light mb-4"
-            style={{ color: 'var(--primary)' }}
+            style={{ color: 'var(--secondary)' }}
           >
             Our Journey
           </h2>
           <div
             className="w-16 h-1 mx-auto"
-            style={{ backgroundColor: 'var(--primary)' }}
+            style={{ backgroundColor: 'var(--secondary)' }}
           />
         </motion.div>
 
@@ -84,7 +84,7 @@ export default function Timeline() {
           {/* Vertical line */}
           <motion.div
             className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1"
-            style={{ backgroundColor: 'var(--primary)', opacity: 0.3 }}
+            style={{ backgroundColor: 'var(--secondary)', opacity: 0.3 }}
             initial={{ scaleY: 0 }}
             animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
@@ -97,24 +97,23 @@ export default function Timeline() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`relative flex gap-6 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Timeline dot */}
                 <motion.div
                   className="absolute left-0 md:left-1/2 top-8 w-8 h-8 -translate-x-1/2 rounded-full bg-white flex items-center justify-center"
                   style={{
-                    boxShadow: `0 0 20px rgba(212, 175, 55, 0.4)`,
+                    boxShadow: `0 0 20px rgba(46, 90, 49, 0.4)`,
                     borderWidth: '3px',
-                    borderColor: 'var(--primary)',
+                    borderColor: 'var(--secondary)',
                   }}
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <motion.div
                     className="w-3 h-3 rounded-full"
-                    style={{ backgroundColor: 'var(--primary)' }}
+                    style={{ backgroundColor: 'var(--secondary)' }}
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                   />
@@ -126,7 +125,7 @@ export default function Timeline() {
                     className="rounded-lg p-6 bg-white"
                     style={{
                       boxShadow:
-                        '0 10px 30px rgba(212, 175, 55, 0.1), 0 0 20px rgba(212, 175, 55, 0.05)',
+                        '0 10px 30px rgba(46, 90, 49, 0.1), 0 0 20px rgba(46, 90, 49, 0.05)',
                     }}
                     whileHover={{ y: -5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
@@ -138,7 +137,7 @@ export default function Timeline() {
                       <div className="flex-1">
                         <p
                           className="text-lg font-light mb-1"
-                          style={{ color: 'var(--primary)' }}
+                          style={{ color: 'var(--secondary)' }}
                         >
                           {event.year}
                         </p>
