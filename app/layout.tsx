@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   metadataBase: new URL('https://udayangani-samudra-weddinginvitatio.vercel.app'),
   icons: {
-    icon: '/wedding-icon.png',
-    apple: '/wedding-icon.png',
+    icon: '/wedding-icon.png?v=2',
+    apple: '/wedding-icon.png?v=2',
   },
   openGraph: {
     title: 'Umayangana & Samudra Wedding',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'Umayangana & Samudra Wedding',
     images: [
       {
-        url: '/wedding-icon.png',
+        url: '/wedding-icon.png?v=2',
         width: 640,
         height: 640,
         alt: 'Umayangana & Samudra Wedding',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Umayangana & Samudra Wedding',
     description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
-    images: ['/wedding-icon.png'],
+    images: ['/wedding-icon.png?v=2'],
   },
 }
 
