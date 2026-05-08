@@ -343,9 +343,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         className="translate-y-4"
                       >
                         <h3 className="font-serif text-[1rem] sm:text-[1.3rem] tracking-[0.08em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-2 sm:gap-4">
-                          <span>UDAYANGANI</span>
+                          <span>SHANI</span>
                           <span aria-hidden="true">&amp;</span>
-                          <span>SAMUDRA</span>
+                          <span>NAVEEN</span>
                         </h3>
                         <div className="mt-4 flex items-center justify-center gap-3">
                           <span className="h-px w-10 bg-primary/50" />
@@ -366,34 +366,34 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       className="absolute left-1/2 top-[54%] z-20 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     >
                       {/* Premium outer ring */}
-                      <motion.div 
+                      <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                         className="absolute inset-0 rounded-full border border-dashed border-primary/25"
                       />
-                      
+
                       <div className="relative h-20 w-20 flex items-center justify-center">
                         {/* Glow effect */}
                         <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-60" />
-                        
+
                         {/* The Heart Stamped Seal */}
-                        <Heart 
-                          className="absolute inset-0 h-full w-full text-primary/40 fill-[url(#waxGradientStandalone)] drop-shadow-[0_15px_35px_rgba(90,13,28,0.6)]" 
+                        <Heart
+                          className="absolute inset-0 h-full w-full text-primary/40 fill-[url(#waxGradientStandalone)] drop-shadow-[0_15px_35px_rgba(90,13,28,0.6)]"
                           strokeWidth={1}
                         />
 
                         {/* Gold Outline Heart */}
-                        <Heart 
-                          className="absolute inset-0 h-full w-full text-[#C9A227] opacity-80" 
+                        <Heart
+                          className="absolute inset-0 h-full w-full text-[#C9A227] opacity-80"
                           strokeWidth={2}
                           fill="none"
                         />
-                        
+
                         {/* Monogram with premium styling */}
                         <span className="relative z-10 font-serif text-lg text-white font-medium tracking-widest drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mb-2">
-                          U <span className="text-[10px] align-middle opacity-80">✦</span> S
+                          S <span className="text-[10px] align-middle opacity-80">✦</span> N
                         </span>
-                        
+
                         {/* Shine overlay */}
                         <div className="absolute inset-4 bg-gradient-to-br from-white/30 to-transparent rounded-full blur-md pointer-events-none" />
                       </div>
@@ -445,7 +445,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       {/* Card frame */}
                       <div className="absolute inset-3 rounded-[18px] border border-primary/25" />
                       <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-primary/50 bg-white text-center text-[10px] leading-8 text-primary font-bold">
-                        US
+                        SN
                       </div>
 
                       {/* Card ornament */}
@@ -456,11 +456,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                           </p>
                           <p className="text-[9px] leading-5 text-slate-500">
                             Bride, the loving daughter of<br />
-                            <span className="font-semibold text-primary">R.P. Susila Rajapaksha & M.D. Pemasiri</span>
+                            <span className="font-semibold text-primary">Mr & Mrs Ganewaththa</span>
                           </p>
                           <p className="text-[9px] leading-5 text-slate-500">
                             Groom, the loving son of<br />
-                            <span className="font-semibold text-primary">K. Soma Kalansooriya & K.G. Piyasena</span>
+                            <span className="font-semibold text-primary">Mr & Mrs Perera (Late)</span>
                           </p>
                         </div>
 
@@ -471,11 +471,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <h2 className="mt-5 font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          UDAYANGANI
+                          SHANI
                         </h2>
                         <p className="mt-1 font-serif text-lg italic text-secondary">&</p>
                         <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          SAMUDRA
+                          NAVEEN
                         </h2>
 
                         <p className="mx-auto mt-5 max-w-[240px] text-[12px] sm:text-sm leading-7 text-slate-600">
@@ -489,7 +489,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-primary">
-                          July 27, 2026
+                          June 29, 2026
                         </p>
                       </div>
                     </div>

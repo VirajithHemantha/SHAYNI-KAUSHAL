@@ -13,19 +13,34 @@ export default function CeremonyDetails() {
 
   const detailGroups = [
     {
-      key: 'reception',
-      title: 'Wedding Celebration',
-      timeLabel: 'Arrival Time',
-      timeValue: '8:30 AM',
-      venueLabel: 'Venue',
-      venueValue: "Asliya Cassandra Ball Room",
-    },
-    {
       key: 'poruwa',
       title: 'Poruwa Ceremony',
       timeLabel: 'Ceremony Time',
-      timeValue: '10:20 AM',
+      timeValue: '9:05 AM',
       timeSub: 'Traditional Poruwa Ceremony',
+      venueLabel: 'Venue',
+      venueValue: "Wasala Nature Resort",
+      venueSub: "Gampaha",
+      mapLink: "https://maps.app.goo.gl/QFoYhpcX6QEzKZk49"
+    },
+    {
+      key: 'church',
+      title: 'Church Ceremony',
+      timeLabel: 'Ceremony Time',
+      timeValue: '2:00 PM Onward',
+      venueLabel: 'Venue',
+      venueValue: "St. Anthony's Church",
+      venueSub: "Weliweriya",
+      mapLink: "https://maps.app.goo.gl/YLxk4WhENK4x5pCR8"
+    },
+    {
+      key: 'reception',
+      title: 'Wedding Reception',
+      timeLabel: 'Arrival Time',
+      timeValue: '6:30 PM - 11:30 PM',
+      venueLabel: 'Venue',
+      venueValue: "Eagle Lagoon",
+      mapLink: "https://maps.app.goo.gl/pj2nymY27RNf1pv8A"
     },
   ];
 
@@ -38,8 +53,8 @@ export default function CeremonyDetails() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 h-full w-full opacity-[0.05] mix-blend-multiply"
           style={{ backgroundImage: `radial-gradient(circle at 20px 20px, var(--primary) 1.1px, transparent 1.1px)`, backgroundSize: '40px 40px' }} />
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
-        <div className="absolute right-0 bottom-0 h-[40rem] w-[40rem] rounded-full bg-secondary/15 blur-[140px]" />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute right-0 bottom-0 h-[40rem] w-[40rem] rounded-full bg-primary/5 blur-[140px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -55,7 +70,7 @@ export default function CeremonyDetails() {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[500px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-[0.5px] border-primary/40 shadow-[0_40px_100px_rgba(142,28,63,0.35)] bg-[linear-gradient(145deg,#8E1C3F_0%,#C24D6D_45%,#2D4F2D_100%)]"
+              className="relative h-[500px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-[0.5px] border-primary/40 shadow-[0_40px_100px_rgba(115,30,61,0.35)] bg-[linear-gradient(145deg,#731e3d_0%,#91274d_45%,#731e3d_100%)]"
             >
               {/* Background Video - More Clear */}
               <video
@@ -74,7 +89,7 @@ export default function CeremonyDetails() {
 
               {/* Large artistic monogram watermark */}
               <div className="absolute inset-0 flex items-center justify-center opacity-[0.1] pointer-events-none">
-                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">US</span>
+                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">SN</span>
               </div>
 
               {/* Central Light Highlight - More Intense */}
@@ -99,7 +114,7 @@ export default function CeremonyDetails() {
                 </motion.div>
                 
                 <h3 className="relative z-10 mt-6 md:mt-8 font-serif text-5xl md:text-7xl text-white tracking-wide drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
-                  U <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> S
+                  S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> N
                 </h3>
                 
                 <div className="relative z-10 mt-6 md:mt-10 flex items-center justify-center gap-5">
@@ -114,9 +129,9 @@ export default function CeremonyDetails() {
                 
                 <div className="relative z-10 mt-8 md:mt-12 group">
                    <div className="absolute -inset-4 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                   <p className="relative z-10 text-xs md:text-sm uppercase tracking-[0.4em] text-white font-bold border-y border-white/40 py-3 md:py-4 px-6 md:px-8 backdrop-blur-sm">
-                     July 27, 2026
-                   </p>
+                    <p className="relative z-10 text-xs md:text-sm uppercase tracking-[0.4em] text-white font-bold border-y border-white/40 py-3 md:py-4 px-6 md:px-8 backdrop-blur-sm">
+                      June 29, 2026
+                    </p>
                 </div>
               </div>
 
@@ -134,7 +149,7 @@ export default function CeremonyDetails() {
 
               {/* Cinematic Light streaks */}
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.15)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_10s_infinite_linear] opacity-40 pointer-events-none" />
-              <div className="absolute inset-0 bg-[linear-gradient(-45deg,transparent_35%,rgba(142,28,63,0.1)_50%,transparent_65%)] bg-[length:250%_250%] animate-[shimmer_12s_infinite_linear] opacity-40" />
+              <div className="absolute inset-0 bg-[linear-gradient(-45deg,transparent_35%,rgba(115,30,61,0.1)_50%,transparent_65%)] bg-[length:250%_250%] animate-[shimmer_12s_infinite_linear] opacity-40" />
 
               {/* Cinematic Lens Flare */}
               <motion.div
@@ -180,8 +195,8 @@ export default function CeremonyDetails() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={inView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                      whileHover={{ x: 10, backgroundColor: 'rgba(142,28,63,0.08)' }}
-                      className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-white p-5 shadow-[0_10px_40px_rgba(142,28,63,0.06)] transition-all cursor-default"
+                      whileHover={{ x: 10, backgroundColor: 'rgba(115,30,61,0.08)' }}
+                      className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-white p-5 shadow-[0_10px_40px_rgba(115,30,61,0.06)] transition-all cursor-default"
                     >
                       <div className="absolute left-0 top-0 w-1 h-full bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
 
@@ -210,10 +225,28 @@ export default function CeremonyDetails() {
                             <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-gradient-to-br from-primary/20 to-white/10 shadow-inner">
                               <MapPin className="h-5 w-5 text-primary" />
                             </div>
-                            <div>
-                              <p className="text-xs uppercase tracking-[0.25em] text-primary/70 mb-1">{group.venueLabel}</p>
-                              <h3 className="font-serif text-2xl text-[#1A1A1A]">{group.venueValue}</h3>
-                              {group.venueSub && <p className="text-sm text-slate-500 mt-1">{group.venueSub}</p>}
+                            <div className="flex flex-col gap-1">
+                              <p className="text-[10px] uppercase tracking-wider text-primary/60">{group.venueLabel}</p>
+                              <p className="font-serif text-lg text-[#1A1A1A] leading-tight">{group.venueValue}</p>
+                              {group.venueSub && <p className="text-xs text-slate-500 italic">{group.venueSub}</p>}
+                              
+                              {group.mapLink && (
+                                <motion.a
+                                  href={group.mapLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  whileHover={{ x: 5 }}
+                                  className="mt-3 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary/80 transition-colors"
+                                >
+                                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10">
+                                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                  </span>
+                                  View on Map
+                                </motion.a>
+                              )}
                             </div>
                           </div>
                         </>

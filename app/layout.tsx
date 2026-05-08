@@ -15,33 +15,33 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Umayangana & Samudra Wedding',
-  description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
+  title: 'Shani & Naveen Wedding',
+  description: 'Join us as we celebrate the union of Shani and Naveen.',
   generator: 'v0.app',
-  metadataBase: new URL('https://umayangana-samudra-wedding-invitati.vercel.app'),
+  metadataBase: new URL('https://shani-naveen-wedding.vercel.app'),
   icons: {
-    icon: '/wedding-logo-us.png',
-    apple: '/wedding-logo-us.png',
+    icon: '/wedding-logo.png',
+    apple: '/wedding-logo.png',
   },
   openGraph: {
-    title: 'Umayangana & Samudra Wedding',
-    description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
+    title: 'Shani & Naveen Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Shani and Naveen .',
     url: '/',
-    siteName: 'Umayangana & Samudra Wedding',
+    siteName: 'Shani & Naveen Wedding',
     images: [
       {
         url: '/wedding-logo-us.png',
         width: 640,
         height: 640,
-        alt: 'Umayangana & Samudra Wedding',
+        alt: 'Shani & Naveen Wedding',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Umayangana & Samudra Wedding',
-    description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
+    title: 'Shani & Naveen Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Shani and Naveen .',
     images: ['/wedding-logo-us.png'],
   },
 }

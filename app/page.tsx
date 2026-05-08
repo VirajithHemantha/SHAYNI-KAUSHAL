@@ -8,7 +8,6 @@ import CeremonyDetails from '@/components/sections/CeremonyDetails';
 import CountdownSection from '@/components/sections/CountdownSection';
 import RingsDivider from '@/components/sections/RingsDivider';
 
-import VenueLocation from '@/components/sections/VenueLocation';
 import RSVPSection from '@/components/sections/RSVPSection';
 import BlessingsSection from '@/components/sections/BlessingsSection';
 import FooterSection from '@/components/sections/FooterSection';
@@ -38,9 +37,6 @@ export default function Home() {
           <RingsDivider />
           <CountdownSection />
 
-          <RingsDivider />
-          <VenueLocation />
-          
           <RingsDivider />
           <RSVPSection />
           

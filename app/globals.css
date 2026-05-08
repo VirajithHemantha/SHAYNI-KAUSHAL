@@ -5,11 +5,9 @@
 
 /* Premium White, Dark Pink & Green Wedding Theme */
 :root {
-  /* Primary Colors - Dark Pink & Forest Green */
-  --pink-dark: #8E1C3F;
-  --pink-light: #AD1D45;
-  --green-primary: #2E5A31;
-  --green-accent: #3A6B35;
+  /* Primary Colors - Dark Maroon & White */
+  --primary-color: #731e3d;
+  --accent-color: #91274d;
   --ivory: #FDFBFB;
   --cream: #FFFFFF;
   --white: #FFFFFF;
@@ -24,19 +22,19 @@
   --card-foreground: var(--text-dark);
   --popover: var(--ivory);
   --popover-foreground: var(--text-dark);
-  --primary: var(--pink-dark);
+  --primary: var(--primary-color);
   --primary-foreground: var(--white);
-  --secondary: var(--green-primary);
+  --secondary: var(--primary-color);
   --secondary-foreground: var(--white);
   --muted: var(--text-muted);
-  --muted-foreground: var(--pink-light);
-  --accent: var(--green-accent);
+  --muted-foreground: var(--accent-color);
+  --accent: var(--accent-color);
   --accent-foreground: var(--white);
   --destructive: #DC2626;
   --destructive-foreground: var(--white);
   --border: var(--border-light);
   --input: var(--white);
-  --ring: var(--pink-dark);
+  --ring: var(--primary-color);
   --radius: 0.5rem;
 }
 

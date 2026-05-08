@@ -13,145 +13,171 @@ export default function HeroSection() {
       ref={ref}
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
-      {/* Optimized Background Image */}
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: 'easeOut' }}
-        className="absolute inset-0 z-0 overflow-hidden"
-      >
-        <Image
-          src="/WhatsApp Image 2026-05-05 at 14.18.44.jpeg"
-          alt="Wedding Background"
-          fill
-          priority
-          className="object-cover opacity-[0.45] grayscale-[15%]"
-          sizes="100vw"
-          quality={85}
-        />
-      </motion.div>
-
-      {/* Decorative watermark image */}
-      <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 0.12, x: 0 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
-        className="absolute -right-20 bottom-0 h-[65%] w-[65%] pointer-events-none mix-blend-screen z-0"
-      >
-        <Image
-          src="/WhatsApp Image 2026-05-05 at 14.18.44.jpeg"
-          alt="Watermark"
-          fill
-          className="object-contain object-right-bottom grayscale contrast-[110%]"
-          sizes="65vw"
-        />
-      </motion.div>
-
-      {/* Premium Gradient Overlays */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(20,17,28,0.4)_60%,rgba(20,17,28,0.9)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,17,28,0.8)_0%,rgba(20,17,28,0.4)_40%,rgba(20,17,28,0.4)_60%,rgba(20,17,28,0.9)_100%)]" />
-
-      {/* Ambient Glows */}
-      <div className="absolute top-[-10%] left-[-5%] h-[40vw] w-[40vw] rounded-full bg-primary/15 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-5%] h-[40vw] w-[40vw] rounded-full bg-secondary/15 blur-[120px] pointer-events-none" />
-
-      <div className="pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-screen">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(142,28,63,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(142,28,63,0.15) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
+      {/* Deep Maroon Base */}
+      <div className="absolute inset-0 z-0 bg-[#731e3d]" />
+      
+      {/* Dynamic Light Beams */}
+      <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
+        <motion.div
+          animate={{
+            rotate: [0, 5, 0],
+            opacity: [0.3, 0.5, 0.3],
           }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -left-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_0deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.1)_25%,transparent_50%)] blur-3xl"
+        />
+        <motion.div
+          animate={{
+            rotate: [0, -5, 0],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute -right-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_180deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.08)_25%,transparent_50%)] blur-3xl"
         />
       </div>
 
-      {/* Floating Sparkles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 15 }).map((_, i) => (
+      {/* Decorative Royal Pattern Overlay */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] mix-blend-overlay"
+        style={{ 
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L50 0 M50 50 L100 50 M50 50 L50 100 M50 50 L0 50' stroke='white' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2' fill='white'/%3E%3C/svg%3E")`,
+          backgroundSize: '80px 80px'
+        }} 
+      />
+
+      {/* Atmospheric Glows */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(115,30,61,0)_0%,rgba(115,30,61,0.4)_70%,rgba(115,30,61,0.8)_100%)]" />
+
+      {/* Floating Gold Dust */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
+        {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute h-1 w-1 rounded-full bg-white/40"
+            className="absolute rounded-full bg-white/30 blur-[1px]"
             style={{
+              width: Math.random() * 3 + 1 + 'px',
+              height: Math.random() * 3 + 1 + 'px',
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0, 0.8, 0],
+              y: [0, -150],
+              x: [0, Math.random() * 40 - 20],
+              opacity: [0, 0.7, 0],
               scale: [0.5, 1.2, 0.5],
             }}
             transition={{
-              duration: 5 + Math.random() * 5,
+              duration: 7 + Math.random() * 10,
               repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: 'easeInOut',
+              delay: Math.random() * 10,
+              ease: 'linear',
             }}
-          >
-            <Sparkles className="h-full w-full" />
-          </motion.div>
+          />
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col items-center justify-center px-4 pb-16 pt-12 text-center sm:px-8">
+      {/* Mobile-only Background Image */}
+      <div className="absolute inset-0 z-0 block md:hidden">
+        <Image 
+          src="/o.png" 
+          alt="Hero Background" 
+          fill 
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      <div className="relative z-20 mx-auto hidden md:flex min-h-[100svh] w-full max-w-6xl flex-col items-center justify-center px-4 pb-16 pt-12 text-center sm:px-8">
+        
+        {/* Decorative Frame for Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/55 bg-white/20 px-5 py-2 backdrop-blur-sm"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="relative flex flex-col items-center px-8 py-16 md:px-16 md:py-24"
         >
-          <Sparkles className="h-4 w-4 text-primary" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-primary sm:text-xs">
-            The Wedding Celebration
-          </span>
-          <Sparkles className="h-4 w-4 text-primary" />
+          {/* Subtle Corner Accents */}
+          <div className="absolute left-0 top-0 h-16 w-16 border-l-[0.5px] border-t-[0.5px] border-white/30" />
+          <div className="absolute right-0 top-0 h-16 w-16 border-r-[0.5px] border-t-[0.5px] border-white/30" />
+          <div className="absolute left-0 bottom-0 h-16 w-16 border-l-[0.5px] border-b-[0.5px] border-white/30" />
+          <div className="absolute right-0 bottom-0 h-16 w-16 border-r-[0.5px] border-b-[0.5px] border-white/30" />
+
+          {/* Top Ornament */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="mb-8 flex items-center gap-4"
+          >
+            <div className="h-px w-8 bg-white/20 md:w-12" />
+            <Sparkles className="h-4 w-4 text-white/60" />
+            <span className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/80 md:text-xs">
+              A Love Written in the Stars
+            </span>
+            <Sparkles className="h-4 w-4 text-white/60" />
+            <div className="h-px w-8 bg-white/20 md:w-12" />
+          </motion.div>
+
+          {/* Parents Information */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="mb-10 space-y-4"
+          >
+            <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+              Daughter of <span className="text-white font-medium">Mr & Mrs Ganewaththa</span>
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-4 bg-white/10" />
+              <Heart className="h-3 w-3 text-white/40 fill-white/10" />
+              <div className="h-px w-4 bg-white/10" />
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+              Son of <span className="text-white font-medium">Mr & Mrs Perera (Late)</span>
+            </p>
+          </motion.div>
+
+          {/* Main Names with Enhanced Typography */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 1 }}
+            className="relative"
+          >
+            <h1 className="font-serif text-5xl font-light leading-tight tracking-[0.15em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
+              SHANI
+              <span className="block text-3xl italic text-white/50 my-4 sm:my-0 sm:inline sm:mx-8 md:text-4xl">&amp;</span>
+              NAVEEN
+            </h1>
+          </motion.div>
+
+          {/* Wedding Date with Premium Look */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="mt-16 flex flex-col items-center"
+          >
+            <div className="h-px w-32 bg-gradient-to-r from-transparent via-white/30 to-transparent mb-6" />
+            <p className="font-serif text-2xl tracking-[0.2em] text-white sm:text-3xl">
+              JUNE 29, 2026
+            </p>
+            <p className="mt-2 text-[10px] uppercase tracking-[0.5em] text-white/40">
+              Gampaha, Sri Lanka
+            </p>
+          </motion.div>
+
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.1, delay: 0.1 }}
-          className="mt-10 font-serif text-3xl font-light leading-tight tracking-[0.12em] text-white drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl lg:text-8xl"
-        >
-          <span className="block sm:inline">UDAYANGANI</span>
-          <span className="block sm:inline sm:mx-4 text-primary italic py-2 sm:py-0">&amp;</span>
-          <span className="block sm:inline">SAMUDRA</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.25 }}
-          className="mt-6 max-w-3xl text-sm leading-relaxed text-white/90 drop-shadow-md sm:text-base md:text-lg italic font-light"
-        >
-          We invite you to witness our love and celebrate the beginning of our forever together.
-        </motion.p>
-
+        {/* Scroll Indicator or Ambient Bottom Sparkle */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="mt-10 rounded-3xl border border-white/20 bg-white/10 px-8 py-6 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)] sm:px-12"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30"
         >
-          <p className="text-[10px] uppercase tracking-[0.35em] text-primary font-bold">Wedding Date</p>
-          <p className="mt-3 font-serif text-3xl text-white sm:text-4xl drop-shadow-lg tracking-wider">July 27, 2026</p>
-          <div className="mt-4 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-white/20" />
-            <Sparkles className="h-3 w-3 text-primary" />
-            <span className="h-px w-8 bg-white/20" />
-          </div>
+          <div className="h-10 w-px bg-gradient-to-b from-white to-transparent" />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 1, delay: 0.55 }}
-          className="mt-8 flex items-center gap-3 text-white/60"
-        >
-          <Sparkles className="h-4 w-4" />
-          <Heart className="h-4 w-4 fill-current" />
-          <Sparkles className="h-4 w-4" />
-        </motion.div>
       </div>
     </section>
   );

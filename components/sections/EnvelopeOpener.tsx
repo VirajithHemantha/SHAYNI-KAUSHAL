@@ -69,7 +69,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(142,28,63,0.12),transparent_35%),linear-gradient(135deg,#1a0408_0%,#2c0710_38%,#0a1a0d_65%,#1a0408_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(115,30,61,0.12),transparent_35%),linear-gradient(135deg,#1a0408_0%,#2c0710_38%,#1f050b_65%,#1a0408_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -84,7 +84,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             }}
           >
             <div className="absolute top-[-12rem] left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute bottom-[-10rem] left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-secondary/[0.07] blur-3xl" />
+            <div className="absolute bottom-[-10rem] left-1/2 h-[24rem] w-[36rem] -translate-x-1/2 rounded-full bg-primary/[0.07] blur-3xl" />
           </motion.div>
 
           {/* Spotlight */}
@@ -108,9 +108,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               className="h-full w-full"
               style={{
                 backgroundImage: `
-                  radial-gradient(circle at 20px 20px, var(--pink-dark) 1.2px, transparent 1.2px),
-                  linear-gradient(rgba(142,28,63,0.12) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(142,28,63,0.12) 1px, transparent 1px)
+                  radial-gradient(circle at 20px 20px, var(--primary) 1.2px, transparent 1.2px),
+                  linear-gradient(rgba(115,30,61,0.12) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(115,30,61,0.12) 1px, transparent 1px)
                 `,
                 backgroundSize: '40px 40px, 80px 80px, 80px 80px',
                 backgroundPosition: '0 0, 0 0, 0 0',
@@ -352,9 +352,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         className="translate-y-4"
                       >
                         <h3 className="font-serif text-[1rem] sm:text-[1.3rem] tracking-[0.08em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-2 sm:gap-4">
-                          <span>UDAYANGANI</span>
+                          <span>SHANI</span>
                           <span aria-hidden="true">&amp;</span>
-                          <span>SAMUDRA</span>
+                          <span>NAVEEN</span>
                         </h3>
                         <div className="mt-4 flex items-center justify-center gap-3">
                           <span className="h-px w-10 bg-primary/50" />
@@ -400,7 +400,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         
                         {/* Monogram with premium styling */}
                         <span className="relative z-10 font-serif text-lg text-white font-medium tracking-widest drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mb-2">
-                          U <span className="text-[10px] align-middle opacity-80">✦</span> S
+                          S <span className="text-[10px] align-middle opacity-80">✦</span> N
                         </span>
                         
                         {/* Shine overlay */}
@@ -465,11 +465,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                           </p>
                           <p className="text-[9px] leading-5 text-[#6a4d0d]">
                             Bride, the loving daughter of<br />
-                            <span className="font-semibold">T H ANUSHA SHIRANTHI</span> (Mother) and <span className="font-semibold">G DAYAWANSA</span> (Father)
+                            <span className="font-semibold text-primary">Mr & Mrs Ganewaththa</span>
                           </p>
                           <p className="text-[9px] leading-5 text-[#6a4d0d]">
                             Groom, the loving son of<br />
-                            <span className="font-semibold">M HELAN DAMMIKA FERNANDO</span> (Mother) and <span className="font-semibold">W A NELSON MERIL FERNANDO</span> (Father)
+                            <span className="font-semibold text-primary">Mr & Mrs Perera (Late)</span>
                           </p>
                         </div>
 
@@ -480,11 +480,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <h2 className="mt-5 font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          UDAYANGANI
+                          SHANI
                         </h2>
-                        <p className="mt-1 font-serif text-lg italic text-secondary">&</p>
+                        <p className="mt-1 font-serif text-lg italic text-primary">&</p>
                         <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          SAMUDRA
+                          NAVEEN
                         </h2>
 
                         <p className="mx-auto mt-5 max-w-[240px] text-[12px] sm:text-sm leading-7 text-slate-600">
@@ -498,7 +498,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-primary">
-                          July 27, 2026
+                          June 29, 2026
                         </p>
                       </div>
                     </div>

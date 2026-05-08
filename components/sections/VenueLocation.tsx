@@ -5,8 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
-const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/ccd6fMYf6Kb75Fuy6';
-const FUNCTION_LOCATION_URL = 'https://maps.app.goo.gl/ccd6fMYf6Kb75Fuy6';
+const LIVE_LOCATION_URL = 'https://share.google/uDiSh5l8Yuj6LV9JZ';
+const FUNCTION_LOCATION_URL = 'https://share.google/uDiSh5l8Yuj6LV9JZ';
 
 export default function VenueLocation() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
@@ -21,12 +21,12 @@ export default function VenueLocation() {
         <motion.div
           animate={{ x: [0, 55, 0], y: [0, 35, 0], scale: [1, 1.12, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -left-[12%] -top-[8%] h-[52vw] w-[52vw] rounded-full bg-gradient-to-br from-[#ffd0d9] to-[#f0f9f0] opacity-75 blur-[110px]"
+          className="absolute -left-[12%] -top-[8%] h-[52vw] w-[52vw] rounded-full bg-gradient-to-br from-[#731e3d]/20 to-[#91274d]/10 opacity-75 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, -45, 0], y: [0, -45, 0], scale: [1, 1.18, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute -right-[10%] top-[34%] h-[44vw] w-[44vw] rounded-full bg-gradient-to-tl from-[#fdf2f4] to-[#f0f9f0] opacity-60 blur-[110px]"
+          className="absolute -right-[10%] top-[34%] h-[44vw] w-[44vw] rounded-full bg-gradient-to-tl from-[#731e3d]/15 to-white opacity-60 blur-[110px]"
         />
         <div
           className="absolute inset-0 opacity-[0.14]"
@@ -112,7 +112,7 @@ export default function VenueLocation() {
                 className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/90 bg-white/85 shadow-[0_0_35px_rgba(142,28,63,0.4)]"
               >
                 <MapPin className="h-10 w-10 text-primary" />
-                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-primary shadow-[0_0_12px_#8E1C3F]" />
+                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-primary shadow-[0_0_12px_#731e3d]" />
               </motion.div>
               <div className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full border border-primary/20" />
               <motion.div
@@ -131,7 +131,7 @@ export default function VenueLocation() {
               >
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live Location</p>
-                  <h4 className="mt-1 font-serif text-lg text-[#1A1A1A] sm:text-2xl">Asliya Cassandra Ball Room</h4>
+                  <h4 className="mt-1 font-serif text-lg text-[#1A1A1A] sm:text-2xl">Eagle Lagoon</h4>
                 </div>
                 <motion.div whileHover={{ scale: 1.08 }} className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-md">
                   <Navigation className="h-5 w-5" />
@@ -153,11 +153,11 @@ export default function VenueLocation() {
               </div>
 
               <h3 className="font-serif text-3xl leading-tight text-[#1A1A1A] md:text-4xl">
-                Asliya Cassandra<br />Ball Room
+                Eagle Lagoon
               </h3>
 
               <p className="mt-5 text-sm leading-relaxed text-slate-600 md:text-base">
-                We warmly invite you to join us at Asliya Cassandra Ball Room to celebrate our special day.
+                We warmly invite you to join us at Eagle Lagoon to celebrate our special day.
               </p>
 
               <a
@@ -176,15 +176,22 @@ export default function VenueLocation() {
                   <div className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-primary" />
                     <div>
-                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Arrival Time</p>
-                      <p className="font-serif text-lg text-[#1A1A1A]">8:30 AM</p>
+                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Poruwa Ceremony</p>
+                      <p className="font-serif text-lg text-[#1A1A1A]">9:05 AM</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-primary" />
                     <div>
-                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Poruwa Ceremony</p>
-                      <p className="font-serif text-lg text-[#1A1A1A]">10:20 AM</p>
+                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Church Ceremony</p>
+                      <p className="font-serif text-lg text-[#1A1A1A]">2:00 PM</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-primary" />
+                    <div>
+                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Reception</p>
+                      <p className="font-serif text-lg text-[#1A1A1A]">6:30 PM</p>
                     </div>
                   </div>
                 </div>
