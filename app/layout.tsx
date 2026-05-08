@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'Umayangana & Samudra Wedding',
   description: 'Join us as we celebrate the blessed Christian union of Umayangana and Samudra .',
   generator: 'v0.app',
-  metadataBase: new URL('https://udayangani-samudra-weddinginvitatio.vercel.app'),
+  metadataBase: new URL('https://umayangana-samudra-wedding-invitati.vercel.app'),
   icons: {
     icon: '/wedding-logo-us.png',
     apple: '/wedding-logo-us.png',
