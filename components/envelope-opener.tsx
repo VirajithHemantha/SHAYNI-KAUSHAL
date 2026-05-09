@@ -12,13 +12,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    // Preload audio
-    audioRef.current = new Audio('/calum-scott-you-are-the-reason_(MP3.co).mp3');
-    audioRef.current.volume = 0.3;
-  }, []);
+
 
   const handleEnvelopeClick = () => {
     if (isAnimating || isOpen) return;
@@ -26,12 +21,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
     setIsAnimating(true);
     setIsOpen(true);
 
-    // Play music
-    if (audioRef.current) {
-      audioRef.current.play().catch(() => {
-        // Audio might not be available or user hasn't interacted with page
-      });
-    }
+
 
     setTimeout(() => {
       setShowContent(true);

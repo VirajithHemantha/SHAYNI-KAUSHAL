@@ -46,7 +46,7 @@ export default function FooterSection() {
               className="mt-7 inline-flex items-center justify-center gap-2 self-center rounded-full border border-primary/25 bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sm transition-all hover:bg-primary/5 hover:border-primary/40"
             >
               <MapPin className="h-4 w-4" />
-              Eagle Lagoon
+              Eagles' Lagoon View
             </a>
           </motion.div>
         </div>

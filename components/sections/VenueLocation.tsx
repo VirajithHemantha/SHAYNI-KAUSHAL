@@ -131,7 +131,7 @@ export default function VenueLocation() {
               >
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live Location</p>
-                  <h4 className="mt-1 font-serif text-lg text-[#1A1A1A] sm:text-2xl">Eagle Lagoon</h4>
+                  <h4 className="mt-1 font-serif text-lg text-[#1A1A1A] sm:text-2xl">Eagles' Lagoon View</h4>
                 </div>
                 <motion.div whileHover={{ scale: 1.08 }} className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-md">
                   <Navigation className="h-5 w-5" />
@@ -153,11 +153,11 @@ export default function VenueLocation() {
               </div>
 
               <h3 className="font-serif text-3xl leading-tight text-[#1A1A1A] md:text-4xl">
-                Eagle Lagoon
+                Eagles' Lagoon View
               </h3>
 
               <p className="mt-5 text-sm leading-relaxed text-slate-600 md:text-base">
-                We warmly invite you to join us at Eagle Lagoon to celebrate our special day.
+                We warmly invite you to join us at Eagles' Lagoon View to celebrate our special day.
               </p>
 
               <a

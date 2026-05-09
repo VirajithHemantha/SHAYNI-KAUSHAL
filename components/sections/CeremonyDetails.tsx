@@ -39,7 +39,7 @@ export default function CeremonyDetails() {
       timeLabel: 'Arrival Time',
       timeValue: '6:30 PM - 11:30 PM',
       venueLabel: 'Venue',
-      venueValue: "Eagle Lagoon",
+      venueValue: "Eagles' Lagoon View",
       mapLink: "https://maps.app.goo.gl/pj2nymY27RNf1pv8A"
     },
   ];

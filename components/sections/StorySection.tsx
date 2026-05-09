@@ -9,14 +9,14 @@ const storyItems = [
   {
     id: 0,
     chapter: "Chapter I",
-    title: "A Professional Start",
-    subtitle: "Business Works",
-    content: "Our paths first crossed in the world of business. What began as a professional collaboration laid the foundation for a connection that would soon transcend the workplace.",
+    title: "How We Met",
+    subtitle: "Year 2021",
+    content: "Our paths first crossed in 2021. What began as a business collaboration laid the foundation for a connection that soon blossomed into a beautiful bond beyond our shared professional journey.",
     icon: Stars,
     color: "#731e3d",
     gradient: "from-[#731e3d]/10 to-[#91274d]/20",
     accentBg: "bg-[#731e3d]",
-    tag: "Work",
+    tag: "The Start",
   },
   {
     id: 1,
