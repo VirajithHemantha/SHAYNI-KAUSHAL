@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SONG_SRC = '/paulyudin-wedding-485932.mp3';
+const SONG_SRC = '/Christina Perri - A Thousand Years.mp3';
 
 export default function MusicPlayer() {
     const audioRef = useRef<HTMLAudioElement | null>(null);

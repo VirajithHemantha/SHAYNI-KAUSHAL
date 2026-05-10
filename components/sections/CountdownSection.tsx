@@ -166,62 +166,61 @@ export default function CountdownSection() {
 
         <div className="rounded-[1.5rem] md:rounded-[2rem] border border-primary/20 bg-white/55 p-2 sm:p-4 md:p-8 shadow-[0_20px_70px_rgba(115,30,61,0.08)] backdrop-blur-xl">
           <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6">
-          {countdownItems.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{
-                duration: 0.7,
-                delay: 0.15 + index * 0.1,
-                type: "spring",
-                bounce: 0.35
-              }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative"
-            >
-              <div className="relative overflow-hidden rounded-[1rem] sm:rounded-[1.8rem] border border-primary/10 bg-white/90 p-2 sm:p-5 shadow-[0_12px_30px_rgba(115,30,61,0.05)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(115,30,61,0.12)] md:p-7">
-                <div className="absolute inset-0 opacity-[0.15]"
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(115,30,61,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(115,30,61,0.2) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                  }}
-                />
+            {countdownItems.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.15 + index * 0.1,
+                  type: "spring",
+                  bounce: 0.35
+                }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative"
+              >
+                <div className="relative overflow-hidden rounded-[1rem] sm:rounded-[1.8rem] border border-primary/10 bg-white/90 p-2 sm:p-5 shadow-[0_12px_30px_rgba(115,30,61,0.05)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(115,30,61,0.12)] md:p-7">
+                  <div className="absolute inset-0 opacity-[0.15]"
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(rgba(115,30,61,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(115,30,61,0.2) 1px, transparent 1px)',
+                      backgroundSize: '24px 24px',
+                    }}
+                  />
 
-                <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-primary/20" />
-                <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-primary/15" />
+                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-primary/20" />
+                  <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-primary/15" />
 
-                <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                  <div className="relative flex h-[48px] w-full items-center justify-center overflow-hidden sm:h-[78px] md:h-[96px]">
-                    <AnimatePresence mode="popLayout">
-                      <motion.span
-                        key={item.value}
-                        initial={{ y: 40, opacity: 0, scale: 0.65 }}
-                        animate={{ y: 0, opacity: 1, scale: 1 }}
-                        exit={{ y: -40, opacity: 0, scale: 0.65 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 370,
-                          damping: 24,
-                          mass: 1
-                        }}
-                        className="absolute font-serif text-2xl font-semibold text-[#1A1A1A] drop-shadow-[0_2px_8px_rgba(115,30,61,0.15)] sm:text-6xl md:text-7xl"
-                      >
-                        {String(item.value).padStart(2, '0')}
-                      </motion.span>
-                    </AnimatePresence>
-                  </div>
+                  <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                    <div className="relative flex h-[60px] w-full items-center justify-center overflow-hidden sm:h-[80px] md:h-[96px]">
+                      <AnimatePresence mode="wait" initial={false}>
+                        <motion.span
+                          key={item.value}
+                          initial={{ y: 25, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: -25, opacity: 0 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30
+                          }}
+                          className="font-serif text-3xl font-semibold text-[#1A1A1A] drop-shadow-[0_2px_8px_rgba(115,30,61,0.15)] sm:text-6xl md:text-7xl"
+                        >
+                          {String(item.value).padStart(2, '0')}
+                        </motion.span>
+                      </AnimatePresence>
+                    </div>
 
-                  <div className="mt-2 rounded-full border border-primary/20 bg-white/75 px-2 py-1 shadow-sm sm:px-3 sm:py-1.5 md:mt-5">
-                    <p className="text-[7px] font-bold uppercase tracking-[0.1em] text-primary sm:text-[10px] md:text-xs">
-                      {item.label}
-                    </p>
+                    <div className="mt-2 rounded-full border border-primary/20 bg-white/75 px-2 py-1 shadow-sm sm:px-3 sm:py-1.5 md:mt-5">
+                      <p className="text-[7px] font-bold uppercase tracking-[0.1em] text-primary sm:text-[10px] md:text-xs">
+                        {item.label}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
           </div>
         </div>
 

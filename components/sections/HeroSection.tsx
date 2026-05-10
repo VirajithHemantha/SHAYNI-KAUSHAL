@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Cross, Heart, Sparkles } from 'lucide-react';
+import { Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 export default function HeroSection() {
@@ -91,7 +91,7 @@ export default function HeroSection() {
         {/* Decorative Frame for Content */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
           className="relative flex flex-col items-center px-8 py-16 md:px-16 md:py-24"
         >
@@ -168,17 +168,17 @@ export default function HeroSection() {
           </motion.div>
 
         </motion.div>
-
-        {/* Scroll Indicator or Ambient Bottom Sparkle */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-30"
-        >
-          <div className="h-10 w-px bg-gradient-to-b from-white to-transparent" />
-        </motion.div>
-
       </div>
+
+      {/* Scroll Indicator with Text */}
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">Scroll</span>
+        <div className="h-10 w-px bg-gradient-to-b from-white/30 to-transparent" />
+      </motion.div>
     </section>
   );
 }

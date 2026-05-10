@@ -487,15 +487,29 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 </motion.button>
               </motion.div>
 
-              {/* Instruction moved outside the envelope for better readability on mobile */}
-              <motion.p
+              {/* Styled Open Button replacing Touch to Unveil */}
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
-                transition={{ duration: 0.4 }}
-                className="mt-12 text-center text-[11px] uppercase tracking-[0.45em] text-white/80"
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="mt-12"
               >
-                Touch to Unveil
-              </motion.p>
+                <button
+                  onClick={handleEnvelopeClick}
+                  className="group relative overflow-hidden rounded-full bg-white/10 px-10 py-3 backdrop-blur-md transition-all hover:bg-white/20 active:scale-95"
+                >
+                  <div className="absolute inset-0 border border-white/20 rounded-full" />
+                  <span className="relative z-10 text-[12px] font-bold uppercase tracking-[0.4em] text-white px-2">
+                    Tap Seal to Open
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-white/20"
+                    initial={{ x: '-100%' }}
+                    whileHover={{ x: '100%' }}
+                    transition={{ duration: 0.6 }}
+                  />
+                </button>
+              </motion.div>
             </div>
           </div>
         </motion.section>
