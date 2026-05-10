@@ -272,7 +272,7 @@ export default function RSVPSection() {
                   transition={{ type: "spring", bounce: 0.5 }}
                   className="relative z-10 flex flex-col items-center justify-center py-16 text-center"
                 >
-                   <motion.div
+                  <motion.div
                     animate={{
                       scale: [1, 1.2, 1],
                       rotate: [0, 10, -10, 0]
