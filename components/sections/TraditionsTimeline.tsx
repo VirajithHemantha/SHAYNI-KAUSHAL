@@ -10,12 +10,7 @@ const timelineItems = [
     description: 'A sacred moment when two souls promise forever',
     icon: '💍',
   },
-  {
-    id: 2,
-    title: 'Poruwa Ceremony',
-    description: 'The sacred union on the traditional wedding stage',
-    icon: '🌸',
-  },
+
   {
     id: 3,
     title: 'Blessings',

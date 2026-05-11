@@ -12,17 +12,7 @@ export default function CeremonyDetails() {
   });
 
   const detailGroups = [
-    {
-      key: 'poruwa',
-      title: 'Poruwa Ceremony',
-      timeLabel: 'Ceremony Time',
-      timeValue: '9:05 AM',
-      timeSub: 'Traditional Poruwa Ceremony',
-      venueLabel: 'Venue',
-      venueValue: "Wasala Nature Resort",
-      venueSub: "Gampaha",
-      mapLink: "https://maps.app.goo.gl/QFoYhpcX6QEzKZk49"
-    },
+
     {
       key: 'church',
       title: 'Church Ceremony',

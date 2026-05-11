@@ -173,13 +173,7 @@ export default function VenueLocation() {
               <div className="mt-8 rounded-2xl border border-primary/20 bg-white/75 p-5 shadow-sm">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4">Event Schedule</p>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full bg-primary" />
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider text-slate-400">Poruwa Ceremony</p>
-                      <p className="font-serif text-lg text-[#1A1A1A]">9:05 AM</p>
-                    </div>
-                  </div>
+
                   <div className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-primary" />
                     <div>
