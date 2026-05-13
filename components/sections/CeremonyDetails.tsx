@@ -30,6 +30,7 @@ export default function CeremonyDetails() {
       timeValue: '6:30 PM - 11:30 PM',
       venueLabel: 'Venue',
       venueValue: "Eagles' Lagoon View",
+      venueSub: "Katunayake",
       mapLink: "https://maps.app.goo.gl/pj2nymY27RNf1pv8A"
     },
   ];
