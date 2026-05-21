@@ -1,6 +1,6 @@
 function doPost(e) {
   try {
-    var spreadsheetId = '1rRXSwHlgJbFhVVsCGf1CWLzDH4JcWOcDp0zyZJmDJ58';
+    var spreadsheetId = '1uNQDmFngZLQNpFAOXzfMqSo8QE-KiNYOylkG2qxEV8I';
     var ss = SpreadsheetApp.openById(spreadsheetId);
 
     var body = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -54,4 +54,10 @@ function doPost(e) {
       .createTextOutput(JSON.stringify({ success: false, error: String(err) }))
       .setMimeType(ContentService.MimeType.JSON);
   }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "success", message: "Wedding App Script is running properly. Please use POST for submissions." }))
+    .setMimeType(ContentService.MimeType.JSON);
 }

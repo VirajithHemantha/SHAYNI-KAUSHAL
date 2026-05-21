@@ -5,11 +5,10 @@ interface SubmitPayload {
   name: string;
   guests?: string;
   dietary?: string;
-  message?: string;
 }
 
 export async function submitToGoogleSheets(payload: SubmitPayload): Promise<void> {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbw_a-Jg8xsFnRtOt0eNKYrEaLw8TslVkVfedH0R0-UEluBQvTNMBM068i0W8cnkSCbE/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwppxH_6R4d_8xrBvSdujD3ClPWsLkMKUSn-IZKo59DeqqfLTASUEj_yd4nBwzVCbEhPg/exec';
 
   await fetch(scriptUrl, {
     method: 'POST',
