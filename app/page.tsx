@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { EnvelopeOpener } from '@/components/envelope-opener';
 import HeroSection from '@/components/sections/HeroSection';
-import StorySection from '@/components/sections/StorySection';
+import InviteMessage from '@/components/sections/InviteMessage';
 import CeremonyDetails from '@/components/sections/CeremonyDetails';
 import CountdownSection from '@/components/sections/CountdownSection';
 import RingsDivider from '@/components/sections/RingsDivider';
@@ -31,7 +31,7 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
-          <StorySection />
+          <InviteMessage />
           <CeremonyDetails />
           
           <RingsDivider />

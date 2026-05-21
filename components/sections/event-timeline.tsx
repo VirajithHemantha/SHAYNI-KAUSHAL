@@ -66,9 +66,9 @@ export function EventTimeline() {
     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f3dcc0_18%,#6b1323_66%,#2b0610_100%)] px-4 py-24 md:px-6 md:py-32">
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#C9A227]/12 blur-3xl" />
+        <div className="absolute left-1/2 top-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#F8E6A6]/12 blur-3xl" />
         <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#fff1d8]/18 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#F8E6A6]/10 blur-3xl" />
       </div>
 
       {/* Pattern overlay */}
@@ -111,9 +111,9 @@ export function EventTimeline() {
       {/* Top decorative divider */}
       <div className="pointer-events-none absolute inset-x-0 top-10 flex justify-center">
         <div className="flex items-center gap-4">
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-          <span className="text-[#C9A227]">✦</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#F8E6A6]/70" />
+          <span className="text-[#F8E6A6]">✦</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#F8E6A6]/70" />
         </div>
       </div>
 
@@ -126,14 +126,14 @@ export function EventTimeline() {
           viewport={viewportSettings}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
-          <div className="mb-4 inline-flex items-center rounded-full border border-[#C9A227]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
+          <div className="mb-4 inline-flex items-center rounded-full border border-[#F8E6A6]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#8b6816]">
               A Love Story in Moments
             </span>
           </div>
 
           <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
-            Our <span className="text-[#C9A227]">Journey</span>
+            Our <span className="text-[#F8E6A6]">Journey</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#6a5147] md:text-lg">
@@ -142,9 +142,9 @@ export function EventTimeline() {
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">❋</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
+            <span className="text-[#F8E6A6]">❋</span>
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
           </div>
         </motion.div>
 
@@ -162,7 +162,7 @@ export function EventTimeline() {
             whileInView={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.2 }}
             viewport={viewportSettings}
-            className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#C9A227]/80 to-transparent md:block origin-top"
+            className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#F8E6A6]/80 to-transparent md:block origin-top"
           />
 
           <div className="relative space-y-14 md:space-y-16">
@@ -179,10 +179,10 @@ export function EventTimeline() {
                   <div className={`${isLeft ? 'md:block' : 'md:hidden'}`}>
                     <motion.div
                       whileHover={{ y: -6 }}
-                      className="group relative overflow-hidden rounded-[1.8rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-7 shadow-[0_22px_50px_rgba(30,12,16,0.16)] transition-all md:p-8"
+                      className="group relative overflow-hidden rounded-[1.8rem] border border-[#F8E6A6]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-7 shadow-[0_22px_50px_rgba(30,12,16,0.16)] transition-all md:p-8"
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.12),transparent_28%)]" />
-                      <div className="absolute inset-3 rounded-[1.35rem] border border-[#C9A227]/12" />
+                      <div className="absolute inset-3 rounded-[1.35rem] border border-[#F8E6A6]/12" />
 
                       <motion.div
                         className="pointer-events-none absolute inset-y-0 left-[-28%] w-[28%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent"
@@ -210,8 +210,8 @@ export function EventTimeline() {
                         </p>
 
                         <div className="mt-5 flex items-center gap-3">
-                          <span className="h-px w-10 bg-[#C9A227]/40" />
-                          <span className="text-[#C9A227]">{event.icon}</span>
+                          <span className="h-px w-10 bg-[#F8E6A6]/40" />
+                          <span className="text-[#F8E6A6]">{event.icon}</span>
                         </div>
                       </div>
                     </motion.div>
@@ -240,10 +240,10 @@ export function EventTimeline() {
                           ease: 'easeInOut',
                           delay: idx * 0.25,
                         }}
-                        className="absolute inset-0 rounded-full bg-[#C9A227]/20 blur-md"
+                        className="absolute inset-0 rounded-full bg-[#F8E6A6]/20 blur-md"
                       />
 
-                      <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-[#C9A227]/28 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] shadow-[0_10px_28px_rgba(201,162,39,0.22)]">
+                      <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-[#F8E6A6]/28 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] shadow-[0_10px_28px_rgba(201,162,39,0.22)]">
                         <span className="text-xl text-[#5f1624]">{event.icon}</span>
                       </div>
                     </motion.div>
@@ -253,10 +253,10 @@ export function EventTimeline() {
                   <div className={`${!isLeft ? 'md:block' : 'md:hidden'}`}>
                     <motion.div
                       whileHover={{ y: -6 }}
-                      className="group relative overflow-hidden rounded-[1.8rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-7 shadow-[0_22px_50px_rgba(30,12,16,0.16)] transition-all md:p-8"
+                      className="group relative overflow-hidden rounded-[1.8rem] border border-[#F8E6A6]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-7 shadow-[0_22px_50px_rgba(30,12,16,0.16)] transition-all md:p-8"
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.12),transparent_28%)]" />
-                      <div className="absolute inset-3 rounded-[1.35rem] border border-[#C9A227]/12" />
+                      <div className="absolute inset-3 rounded-[1.35rem] border border-[#F8E6A6]/12" />
 
                       <motion.div
                         className="pointer-events-none absolute inset-y-0 left-[-28%] w-[28%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/35 to-transparent"
@@ -284,8 +284,8 @@ export function EventTimeline() {
                         </p>
 
                         <div className="mt-5 flex items-center gap-3">
-                          <span className="h-px w-10 bg-[#C9A227]/40" />
-                          <span className="text-[#C9A227]">{event.icon}</span>
+                          <span className="h-px w-10 bg-[#F8E6A6]/40" />
+                          <span className="text-[#F8E6A6]">{event.icon}</span>
                         </div>
                       </div>
                     </motion.div>
@@ -295,10 +295,10 @@ export function EventTimeline() {
                   <div className="md:hidden">
                     <motion.div
                       whileHover={{ y: -4 }}
-                      className="group relative overflow-hidden rounded-[1.6rem] border border-[#C9A227]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-6 shadow-[0_18px_40px_rgba(30,12,16,0.14)]"
+                      className="group relative overflow-hidden rounded-[1.6rem] border border-[#F8E6A6]/18 bg-[linear-gradient(180deg,rgba(255,250,244,0.98)_0%,rgba(245,230,200,0.94)_100%)] p-6 shadow-[0_18px_40px_rgba(30,12,16,0.14)]"
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,39,0.12),transparent_28%)]" />
-                      <div className="absolute inset-3 rounded-[1.2rem] border border-[#C9A227]/12" />
+                      <div className="absolute inset-3 rounded-[1.2rem] border border-[#F8E6A6]/12" />
 
                       <div className="relative z-10">
                         <p className="text-[11px] uppercase tracking-[0.35em] text-[#a38022]">
@@ -331,9 +331,9 @@ export function EventTimeline() {
           className="mx-auto mt-20 max-w-3xl text-center"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">✦</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
+            <span className="text-[#F8E6A6]">✦</span>
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
           </div>
 
           <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">

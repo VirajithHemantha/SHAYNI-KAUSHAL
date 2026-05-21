@@ -114,7 +114,7 @@ export default function OpeningSequence({ onComplete }: OpeningSequenceProps) {
 
                 <defs>
                   <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%">
-                    <stop offset="0%" stopColor="#C9A227" />
+                    <stop offset="0%" stopColor="#F8E6A6" />
                     <stop offset="100%" stopColor="#D4AF37" />
                   </linearGradient>
                 </defs>

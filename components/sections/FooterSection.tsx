@@ -3,18 +3,18 @@
 import { motion } from 'framer-motion';
 import { Heart, MapPin, Sparkles } from 'lucide-react';
 
-const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/pj2nymY27RNf1pv8A';
+const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9';
 
 export default function FooterSection() {
   return (
     <footer className="relative overflow-hidden bg-[#FDFBFB] border-t border-primary/10 pt-12 pb-8 md:pt-20 md:pb-12 text-[#1A1A1A]">
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(115,30,61,0.05),transparent_52%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(226,133,110,0.05),transparent_52%)]" />
       <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="absolute inset-0 opacity-[0.02] mix-blend-multiply pointer-events-none"
-        style={{ backgroundImage: `linear-gradient(rgba(115,30,61,1) 1px, transparent 1px), linear-gradient(90deg, rgba(115,30,61,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+        style={{ backgroundImage: `linear-gradient(rgba(226,133,110,1) 1px, transparent 1px), linear-gradient(90deg, rgba(226,133,110,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -34,7 +34,7 @@ export default function FooterSection() {
             </div>
 
             <h2 className="mb-6 font-serif text-5xl font-light tracking-wide text-primary md:text-6xl">
-              S <span className="text-3xl text-primary/40">&</span> N
+              S <span className="text-3xl text-primary/40">&</span> K
             </h2>
             <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-[#4B4B4B]">
               We look forward to sharing our joy and celebrating our union surrounded by the people we love most.
@@ -47,8 +47,8 @@ export default function FooterSection() {
             >
               <MapPin className="h-4 w-4" />
               <div className="flex flex-col items-start">
-                <span>Eagles' Lagoon View</span>
-                <span className="text-[10px] opacity-70 normal-case font-normal">Katunayake</span>
+                <span>St. Voyage Banquet</span>
+                <span className="text-[10px] opacity-70 normal-case font-normal">Navakkadu</span>
               </div>
             </a>
           </motion.div>
@@ -71,7 +71,7 @@ export default function FooterSection() {
         <div className="flex flex-col items-center justify-between gap-4 px-4 text-center text-xs font-light tracking-[0.1em] text-primary md:flex-row md:text-left">
           <div className="space-y-2">
             <p className="!text-primary/70">
-              &copy; {new Date().getFullYear()} SHANI & NAVEEN. All rights reserved.
+              &copy; {new Date().getFullYear()} SHAYNI & KAUSHAL. All rights reserved.
             </p>
             <p className="!text-primary/70">
               Design and created by <span className="!text-primary font-medium">InviteMint</span> | Connect WhatsApp: <a href="https://wa.me/94707819074" target="_blank" rel="noopener noreferrer" className="!text-primary hover:underline font-medium">+94 70 781 9074</a>

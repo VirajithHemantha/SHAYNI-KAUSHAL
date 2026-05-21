@@ -15,33 +15,33 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Shani & Naveen Wedding',
-  description: 'Join us as we celebrate the union of Shani and Naveen.',
+  title: 'Shayni & Kaushal Wedding',
+  description: 'Join us as we celebrate the union of Shayni and Kaushal.',
   generator: 'v0.app',
-  metadataBase: new URL('https://shani-naveen-wedding.vercel.app'),
+  metadataBase: new URL('https://shayni-kaushal-wedding.vercel.app'),
   icons: {
     icon: '/wedding-logo.png',
     apple: '/wedding-logo.png',
   },
   openGraph: {
-    title: 'Shani & Naveen Wedding',
-    description: 'Join us as we celebrate the blessed Christian union of Shani and Naveen .',
+    title: 'Shayni & Kaushal Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Shayni and Kaushal.',
     url: '/',
-    siteName: 'Shani & Naveen Wedding',
+    siteName: 'Shayni & Kaushal Wedding',
     images: [
       {
         url: '/wedding-logo-us.png',
         width: 640,
         height: 640,
-        alt: 'Shani & Naveen Wedding',
+        alt: 'Shayni & Kaushal Wedding',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shani & Naveen Wedding',
-    description: 'Join us as we celebrate the blessed Christian union of Shani and Naveen .',
+    title: 'Shayni & Kaushal Wedding',
+    description: 'Join us as we celebrate the blessed Christian union of Shayni and Kaushal.',
     images: ['/wedding-logo-us.png'],
   },
 }

@@ -82,7 +82,7 @@ export default function MusicPlayer() {
                         animate={{ opacity: 1, x: 0, scale: 1 }}
                         exit={{ opacity: 0, x: 20, scale: 0.8 }}
                         className="bg-white/90 backdrop-blur-md border border-primary/30 rounded-full px-4 py-2 shadow-xl flex items-center gap-2 mb-2"
-                        style={{ borderColor: 'rgba(142, 28, 63, 0.3)' }}
+                        style={{ borderColor: 'rgba(226, 133, 110, 0.3)' }}
                     >
                         <motion.span
                             animate={{ scale: [1, 1.2, 1] }}
@@ -103,7 +103,7 @@ export default function MusicPlayer() {
                 onClick={toggle}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="pointer-events-auto relative w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(142,28,63,0.4)] border-2 border-white group"
+                className="pointer-events-auto relative w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(226,133,110,0.4)] border-2 border-white group"
                 style={{
                     background: 'linear-gradient(135deg, var(--pink-dark) 0%, var(--pink-light) 100%)',
                 }}
@@ -116,13 +116,13 @@ export default function MusicPlayer() {
                             className="absolute inset-0 rounded-full border border-primary/40"
                             animate={{ scale: [1, 1.8], opacity: [0.5, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-                            style={{ borderColor: 'rgba(142, 28, 63, 0.4)' }}
+                            style={{ borderColor: 'rgba(226, 133, 110, 0.4)' }}
                         />
                         <motion.div
                             className="absolute inset-0 rounded-full border border-primary/40"
                             animate={{ scale: [1, 1.4], opacity: [0.5, 0] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: 0.5 }}
-                            style={{ borderColor: 'rgba(142, 28, 63, 0.4)' }}
+                            style={{ borderColor: 'rgba(226, 133, 110, 0.4)' }}
                         />
                     </>
                 )}

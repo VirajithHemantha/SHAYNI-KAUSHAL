@@ -64,9 +64,9 @@ export function CountdownTimer() {
     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f7ecda_0%,#f3dcc0_18%,#6f1324_62%,#2d0710_100%)] px-4 py-24 md:px-6 md:py-32">
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-8 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#C9A227]/12 blur-3xl" />
+        <div className="absolute left-1/2 top-8 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[#F8E6A6]/12 blur-3xl" />
         <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#fff1d8]/20 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#C9A227]/10 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#F8E6A6]/10 blur-3xl" />
       </div>
 
       {/* Pattern overlay */}
@@ -109,9 +109,9 @@ export function CountdownTimer() {
       {/* Top decorative divider */}
       <div className="pointer-events-none absolute inset-x-0 top-10 flex justify-center">
         <div className="flex items-center gap-4">
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-          <span className="text-[#C9A227]">✦</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#F8E6A6]/70" />
+          <span className="text-[#F8E6A6]">✦</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#F8E6A6]/70" />
         </div>
       </div>
 
@@ -124,14 +124,14 @@ export function CountdownTimer() {
           viewport={viewportSettings}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <div className="mb-4 inline-flex items-center rounded-full border border-[#C9A227]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
+          <div className="mb-4 inline-flex items-center rounded-full border border-[#F8E6A6]/20 bg-white/30 px-4 py-2 backdrop-blur-sm">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#8b6816]">
               Awaiting Our Sacred Day
             </span>
           </div>
 
           <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
-            Countdown to <span className="text-[#C9A227]">Forever</span>
+            Countdown to <span className="text-[#F8E6A6]">Forever</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#6a5147] md:text-lg">
@@ -140,9 +140,9 @@ export function CountdownTimer() {
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-[#C9A227]/40" />
-            <span className="text-[#C9A227]">❋</span>
-            <span className="h-px w-12 bg-[#C9A227]/40" />
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
+            <span className="text-[#F8E6A6]">❋</span>
+            <span className="h-px w-12 bg-[#F8E6A6]/40" />
           </div>
         </motion.div>
 
@@ -154,10 +154,10 @@ export function CountdownTimer() {
           viewport={viewportSettings}
           className="relative mx-auto max-w-5xl"
         >
-          <div className="absolute inset-0 rounded-[2rem] bg-[#C9A227]/10 blur-2xl" />
-          <div className="absolute -inset-4 rounded-[2.3rem] border border-[#C9A227]/12" />
+          <div className="absolute inset-0 rounded-[2rem] bg-[#F8E6A6]/10 blur-2xl" />
+          <div className="absolute -inset-4 rounded-[2.3rem] border border-[#F8E6A6]/12" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#C9A227]/20 bg-[linear-gradient(180deg,rgba(92,15,29,0.95)_0%,rgba(56,8,17,0.98)_100%)] px-6 py-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)] md:px-10 md:py-14">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#F8E6A6]/20 bg-[linear-gradient(180deg,rgba(92,15,29,0.95)_0%,rgba(56,8,17,0.98)_100%)] px-6 py-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)] md:px-10 md:py-14">
             {/* Card glow */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.16),transparent_35%)]" />
 
@@ -165,10 +165,10 @@ export function CountdownTimer() {
             <div className="absolute inset-4 rounded-[1.6rem] border border-[#f5e6c8]/10" />
 
             {/* Corner ornaments */}
-            <div className="absolute left-5 top-5 h-12 w-12 rounded-tl-xl border-l border-t border-[#C9A227]/40" />
-            <div className="absolute right-5 top-5 h-12 w-12 rounded-tr-xl border-r border-t border-[#C9A227]/40" />
-            <div className="absolute bottom-5 left-5 h-12 w-12 rounded-bl-xl border-b border-l border-[#C9A227]/40" />
-            <div className="absolute bottom-5 right-5 h-12 w-12 rounded-br-xl border-b border-r border-[#C9A227]/40" />
+            <div className="absolute left-5 top-5 h-12 w-12 rounded-tl-xl border-l border-t border-[#F8E6A6]/40" />
+            <div className="absolute right-5 top-5 h-12 w-12 rounded-tr-xl border-r border-t border-[#F8E6A6]/40" />
+            <div className="absolute bottom-5 left-5 h-12 w-12 rounded-bl-xl border-b border-l border-[#F8E6A6]/40" />
+            <div className="absolute bottom-5 right-5 h-12 w-12 rounded-br-xl border-b border-r border-[#F8E6A6]/40" />
 
             <div className="relative z-10 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
               {units.map((unit, idx) => (
@@ -189,7 +189,7 @@ export function CountdownTimer() {
                         repeat: Infinity,
                         ease: 'linear',
                       }}
-                      className="absolute inset-0 rounded-full border border-[#C9A227]/25"
+                      className="absolute inset-0 rounded-full border border-[#F8E6A6]/25"
                     />
 
                     {/* Secondary ring */}
@@ -229,7 +229,7 @@ export function CountdownTimer() {
                           repeat: Infinity,
                           ease: 'easeInOut',
                         }}
-                        className="mt-3 h-px w-8 bg-[#C9A227]/45"
+                        className="mt-3 h-px w-8 bg-[#F8E6A6]/45"
                       />
                     </div>
 
@@ -242,9 +242,9 @@ export function CountdownTimer() {
 
             {/* Decorative divider */}
             <div className="mt-12 flex items-center justify-center gap-3">
-              <span className="h-px w-12 bg-[#C9A227]/35" />
-              <span className="text-[#C9A227]">✦</span>
-              <span className="h-px w-12 bg-[#C9A227]/35" />
+              <span className="h-px w-12 bg-[#F8E6A6]/35" />
+              <span className="text-[#F8E6A6]">✦</span>
+              <span className="h-px w-12 bg-[#F8E6A6]/35" />
             </div>
 
             {/* Footer line */}

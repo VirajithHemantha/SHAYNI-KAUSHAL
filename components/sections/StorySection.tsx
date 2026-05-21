@@ -13,9 +13,9 @@ const storyItems = [
     subtitle: "Year 2021",
     content: "Our paths first crossed in 2021. What began as a business collaboration laid the foundation for a connection that soon blossomed into a beautiful bond beyond our shared professional journey.",
     icon: Stars,
-    color: "#731e3d",
-    gradient: "from-[#731e3d]/10 to-[#91274d]/20",
-    accentBg: "bg-[#731e3d]",
+    color: "#E2856E",
+    gradient: "from-[#E2856E]/10 to-[#F3B0A2]/20",
+    accentBg: "bg-[#E2856E]",
     tag: "The Start",
   },
   {
@@ -25,9 +25,9 @@ const storyItems = [
     subtitle: "Serendipity",
     content: "Destiny had a different plan. We met again unexpectedly, and that unintentional encounter sparked a flame that neither of us could ignore.",
     icon: BookHeart,
-    color: "#91274d",
-    gradient: "from-[#91274d]/10 to-[#731e3d]/20",
-    accentBg: "bg-[#91274d]",
+    color: "#F3B0A2",
+    gradient: "from-[#F3B0A2]/10 to-[#E2856E]/20",
+    accentBg: "bg-[#F3B0A2]",
     tag: "Fate",
   },
   {
@@ -37,9 +37,9 @@ const storyItems = [
     subtitle: "Beginning of Us",
     content: "From that moment on, our lives were forever changed. We began our beautiful journey together, building a bond that has only grown stronger with each passing day.",
     icon: Heart,
-    color: "#731e3d",
-    gradient: "from-[#731e3d]/10 to-[#91274d]/20",
-    accentBg: "bg-[#731e3d]",
+    color: "#E2856E",
+    gradient: "from-[#E2856E]/10 to-[#F3B0A2]/20",
+    accentBg: "bg-[#E2856E]",
     tag: "Love",
   }
 ];
@@ -76,7 +76,7 @@ export default function StorySection() {
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #8E1C3F 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #E2856E 1px, transparent 1px)`,
           backgroundSize: '36px 36px',
         }}
       />
@@ -104,7 +104,7 @@ export default function StorySection() {
             <span className="italic text-primary relative inline-block">
               Stars
               <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" preserveAspectRatio="none">
-                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#AD1D45" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                <path d="M0 6 Q25 2 50 6 Q75 10 100 6" stroke="#F3B0A2" strokeWidth="2.5" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h2>

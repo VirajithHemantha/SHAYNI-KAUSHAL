@@ -42,7 +42,7 @@ export default function GallerySection() {
 
         {/* Subtle grid pattern for premium modern feel */}
         <div className="absolute inset-0 opacity-[0.03] mix-blend-screen"
-          style={{ backgroundImage: `linear-gradient(rgba(142,28,63,1) 1px, transparent 1px), linear-gradient(90deg, rgba(142,28,63,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+          style={{ backgroundImage: `linear-gradient(rgba(226,133,110,1) 1px, transparent 1px), linear-gradient(90deg, rgba(226,133,110,1) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
       </div>
 
       <div className="relative z-10 mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8 text-center">

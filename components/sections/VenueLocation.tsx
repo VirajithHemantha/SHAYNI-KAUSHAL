@@ -21,12 +21,12 @@ export default function VenueLocation() {
         <motion.div
           animate={{ x: [0, 55, 0], y: [0, 35, 0], scale: [1, 1.12, 1] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -left-[12%] -top-[8%] h-[52vw] w-[52vw] rounded-full bg-gradient-to-br from-[#731e3d]/20 to-[#91274d]/10 opacity-75 blur-[110px]"
+          className="absolute -left-[12%] -top-[8%] h-[52vw] w-[52vw] rounded-full bg-gradient-to-br from-[#E2856E]/20 to-[#F3B0A2]/10 opacity-75 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, -45, 0], y: [0, -45, 0], scale: [1, 1.18, 1] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute -right-[10%] top-[34%] h-[44vw] w-[44vw] rounded-full bg-gradient-to-tl from-[#731e3d]/15 to-white opacity-60 blur-[110px]"
+          className="absolute -right-[10%] top-[34%] h-[44vw] w-[44vw] rounded-full bg-gradient-to-tl from-[#E2856E]/15 to-white opacity-60 blur-[110px]"
         />
         <div
           className="absolute inset-0 opacity-[0.14]"
@@ -47,7 +47,7 @@ export default function VenueLocation() {
         >
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_28px_rgba(142,28,63,0.1)] backdrop-blur-md"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_28px_rgba(226,133,110,0.1)] backdrop-blur-md"
           >
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-primary sm:text-sm">
@@ -81,7 +81,7 @@ export default function VenueLocation() {
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-primary/10 bg-white/65 shadow-[0_16px_50px_rgba(142,28,63,0.1)] backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
+            className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-primary/10 bg-white/65 shadow-[0_16px_50px_rgba(226,133,110,0.1)] backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
           >
             {/* Venue Image Background */}
             <div className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-110">
@@ -109,10 +109,10 @@ export default function VenueLocation() {
               <motion.div
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/90 bg-white/85 shadow-[0_0_35px_rgba(142,28,63,0.4)]"
+                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/90 bg-white/85 shadow-[0_0_35px_rgba(226,133,110,0.4)]"
               >
                 <MapPin className="h-10 w-10 text-primary" />
-                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-primary shadow-[0_0_12px_#731e3d]" />
+                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-primary shadow-[0_0_12px_#E2856E]" />
               </motion.div>
               <div className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full border border-primary/20" />
               <motion.div
@@ -127,7 +127,7 @@ export default function VenueLocation() {
                 href={LIVE_LOCATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 rounded-2xl border border-primary/15 bg-white/85 px-4 py-3 shadow-[0_10px_30px_rgba(142,28,63,0.08)] transition-all hover:bg-white sm:px-5 sm:py-4"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-primary/15 bg-white/85 px-4 py-3 shadow-[0_10px_30px_rgba(226,133,110,0.08)] transition-all hover:bg-white sm:px-5 sm:py-4"
               >
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Live Location</p>
@@ -147,7 +147,7 @@ export default function VenueLocation() {
             transition={{ duration: 1, delay: 0.15, ease: 'easeOut' }}
             className="lg:col-span-4"
           >
-            <div className="h-full rounded-[2rem] border border-primary/10 bg-white/80 p-6 shadow-[0_16px_45px_rgba(142,28,63,0.08)] backdrop-blur-xl md:p-7">
+            <div className="h-full rounded-[2rem] border border-primary/10 bg-white/80 p-6 shadow-[0_16px_45px_rgba(226,133,110,0.08)] backdrop-blur-xl md:p-7">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/70 px-4 py-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Venue Details</span>
@@ -166,7 +166,7 @@ export default function VenueLocation() {
                 href={LIVE_LOCATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_12px_28px_rgba(142,28,63,0.3)] transition-transform hover:scale-[1.02]"
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_12px_28px_rgba(226,133,110,0.3)] transition-transform hover:scale-[1.02]"
               >
                 Open Venue Location
                 <ExternalLink className="h-4 w-4" />

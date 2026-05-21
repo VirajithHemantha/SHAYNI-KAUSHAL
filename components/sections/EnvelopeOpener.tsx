@@ -59,7 +59,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(115,30,61,0.12),transparent_35%),linear-gradient(135deg,#1a0408_0%,#2c0710_38%,#1f050b_65%,#1a0408_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(226,133,110,0.12),transparent_35%),linear-gradient(135deg,#1a0408_0%,#2c0710_38%,#1f050b_65%,#1a0408_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -99,8 +99,8 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               style={{
                 backgroundImage: `
                   radial-gradient(circle at 20px 20px, var(--primary) 1.2px, transparent 1.2px),
-                  linear-gradient(rgba(115,30,61,0.12) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(115,30,61,0.12) 1px, transparent 1px)
+                  linear-gradient(rgba(226,133,110,0.12) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(226,133,110,0.12) 1px, transparent 1px)
                 `,
                 backgroundSize: '40px 40px, 80px 80px, 80px 80px',
                 backgroundPosition: '0 0, 0 0, 0 0',
@@ -215,7 +215,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 className="relative"
               >
                 <motion.div
-                  className="absolute -inset-8 -z-20 rounded-[3rem] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(142,28,63,0.0),rgba(142,28,63,0.2),rgba(142,28,63,0.0),rgba(142,28,63,0.18),rgba(142,28,63,0.0))] blur-2xl"
+                  className="absolute -inset-8 -z-20 rounded-[3rem] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(226,133,110,0.0),rgba(226,133,110,0.2),rgba(226,133,110,0.0),rgba(226,133,110,0.18),rgba(226,133,110,0.0))] blur-2xl"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
                 />
@@ -268,15 +268,15 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
 
                     {/* Premium foil layers for closed-envelope look */}
                     <div className="pointer-events-none absolute inset-[8px] rounded-[22px] border border-[#f2d89c]/40" />
-                    <div className="pointer-events-none absolute inset-[14px] rounded-[18px] border border-[#c9a227]/20" />
+                    <div className="pointer-events-none absolute inset-[14px] rounded-[18px] border border-[#F8E6A6]/20" />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(128deg,rgba(255,255,255,0.26)_0%,transparent_36%,transparent_64%,rgba(255,255,255,0.2)_100%)]" />
 
                     {!isOpen && (
                       <>
-                        <div className="pointer-events-none absolute left-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                        <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                        <div className="pointer-events-none absolute bottom-5 left-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
-                        <div className="pointer-events-none absolute bottom-5 right-5 h-8 w-8 rounded-lg border border-[#c9a227]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
+                        <div className="pointer-events-none absolute left-5 top-5 h-8 w-8 rounded-lg border border-[#F8E6A6]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
+                        <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 rounded-lg border border-[#F8E6A6]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
+                        <div className="pointer-events-none absolute bottom-5 left-5 h-8 w-8 rounded-lg border border-[#F8E6A6]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
+                        <div className="pointer-events-none absolute bottom-5 right-5 h-8 w-8 rounded-lg border border-[#F8E6A6]/45 bg-[linear-gradient(145deg,rgba(255,255,255,0.5),rgba(201,162,39,0.15))]" />
                       </>
                     )}
 
@@ -295,7 +295,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
                       }}
                     >
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,#8E1C3F_0%,#AD1D45_38%,#c94c6a_100%)] shadow-[0_18px_40px_rgba(0,0,0,0.22)]" />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,#E2856E_0%,#F3B0A2_38%,#F3B0A2_100%)] shadow-[0_18px_40px_rgba(0,0,0,0.22)]" />
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.22),transparent_45%)]" />
 
                       {/* Flap ornament */}
@@ -342,9 +342,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         className="translate-y-4"
                       >
                         <h3 className="font-serif text-[1rem] sm:text-[1.3rem] tracking-[0.08em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-2 sm:gap-4">
-                          <span>SHANI</span>
+                          <span>SHAYNI</span>
                           <span aria-hidden="true">&amp;</span>
-                          <span>NAVEEN</span>
+                          <span>KAUSHAL</span>
                         </h3>
                         <div className="mt-4 flex items-center justify-center gap-3">
                           <span className="h-px w-10 bg-primary/50" />
@@ -377,20 +377,20 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         
                         {/* The Heart Stamped Seal */}
                         <Heart 
-                          className="absolute inset-0 h-full w-full text-primary/40 fill-[url(#waxGradient)] drop-shadow-[0_15px_35px_rgba(90,13,28,0.6)]" 
+                          className="absolute inset-0 h-full w-full text-primary/40 fill-[url(#waxGradient)] drop-shadow-[0_15px_35px_rgba(209,117,94,0.6)]" 
                           strokeWidth={1}
                         />
 
                         {/* Gold Outline Heart */}
                         <Heart 
-                          className="absolute inset-0 h-full w-full text-[#C9A227] opacity-80" 
+                          className="absolute inset-0 h-full w-full text-[#F8E6A6] opacity-80" 
                           strokeWidth={2}
                           fill="none"
                         />
                         
                         {/* Monogram with premium styling */}
                         <span className="relative z-10 font-serif text-lg text-white font-medium tracking-widest drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mb-2">
-                          S <span className="text-[10px] align-middle opacity-80">✦</span> N
+                          S <span className="text-[10px] align-middle opacity-80">✦</span> K
                         </span>
                         
                         {/* Shine overlay */}
@@ -401,9 +401,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       <svg width="0" height="0" className="absolute">
                         <defs>
                           <radialGradient id="waxGradient" cx="35%" cy="35%" r="65%">
-                            <stop offset="0%" stopColor="#AD1D45" />
-                            <stop offset="60%" stopColor="#8E1C3F" />
-                            <stop offset="100%" stopColor="#5b0d1c" />
+                            <stop offset="0%" stopColor="#F3B0A2" />
+                            <stop offset="60%" stopColor="#E2856E" />
+                            <stop offset="100%" stopColor="#D1755E" />
                           </radialGradient>
                         </defs>
                       </svg>
@@ -437,14 +437,14 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     }}
                     className="pointer-events-none absolute left-1/2 top-[56px] w-[320px] sm:w-[360px] -translate-x-1/2"
                   >
-                    <div className="relative overflow-hidden rounded-[24px] border border-[#C9A227]/35 bg-[linear-gradient(180deg,rgba(248,236,214,0.98)_0%,rgba(255,252,247,0.99)_100%)] px-6 sm:px-8 py-10 shadow-[0_25px_60px_rgba(0,0,0,0.28)]">
+                    <div className="relative overflow-hidden rounded-[24px] border border-[#F8E6A6]/35 bg-[linear-gradient(180deg,rgba(248,236,214,0.98)_0%,rgba(255,252,247,0.99)_100%)] px-6 sm:px-8 py-10 shadow-[0_25px_60px_rgba(0,0,0,0.28)]">
                       {/* Card glow */}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.18),transparent_44%)]" />
 
                       {/* Card frame */}
                       <div className="absolute inset-3 rounded-[18px] border border-primary/25" />
                       <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-primary/50 bg-white/70 text-center text-[10px] leading-8 text-primary">
-                        US
+                        SK
                       </div>
 
                       {/* Card ornament */}
@@ -455,26 +455,26 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                           </p>
                           <p className="text-[9px] leading-5 text-[#6a4d0d]">
                             Bride, the loving daughter of<br />
-                            <span className="font-semibold text-primary">Mr & Mrs Ganewaththa</span>
+                            <span className="font-semibold text-primary">Mr Janaka Dias & Mrs Anusha Thisera</span>
                           </p>
                           <p className="text-[9px] leading-5 text-[#6a4d0d]">
                             Groom, the loving son of<br />
-                            <span className="font-semibold text-primary">Mr & Mrs Perera (Late)</span>
+                            <span className="font-semibold text-primary">Mr Samantha Perera & Mrs Swarna Fernando</span>
                           </p>
                         </div>
 
                         <div className="mt-4 flex items-center justify-center gap-3">
-                          <span className="h-px w-10 bg-[#C9A227]/45" />
-                          <span className="text-[#C9A227]">❋</span>
-                          <span className="h-px w-10 bg-[#C9A227]/45" />
+                          <span className="h-px w-10 bg-[#F8E6A6]/45" />
+                          <span className="text-[#F8E6A6]">❋</span>
+                          <span className="h-px w-10 bg-[#F8E6A6]/45" />
                         </div>
 
                         <h2 className="mt-5 font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          SHANI
+                          SHAYNI
                         </h2>
                         <p className="mt-1 font-serif text-lg italic text-primary">&</p>
                         <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          NAVEEN
+                          KAUSHAL
                         </h2>
 
                         <p className="mx-auto mt-5 max-w-[240px] text-[12px] sm:text-sm leading-7 text-slate-600">
@@ -482,13 +482,13 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </p>
 
                         <div className="mt-6 flex items-center justify-center gap-3">
-                          <span className="h-px w-10 bg-[#C9A227]/45" />
-                          <span className="text-[#C9A227]">✦</span>
-                          <span className="h-px w-10 bg-[#C9A227]/45" />
+                          <span className="h-px w-10 bg-[#F8E6A6]/45" />
+                          <span className="text-[#F8E6A6]">✦</span>
+                          <span className="h-px w-10 bg-[#F8E6A6]/45" />
                         </div>
 
                         <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-primary">
-                          June 29, 2026
+                          June 18, 2026
                         </p>
                       </div>
                     </div>

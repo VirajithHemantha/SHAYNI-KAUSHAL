@@ -3,17 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Premium White, Dark Pink & Green Wedding Theme */
+/* Premium Peach & White Wedding Theme */
 :root {
-  /* Primary Colors - Dark Maroon & White */
-  --primary-color: #731e3d;
-  --accent-color: #91274d;
+  /* Primary Colors - Peach & White */
+  --primary-color: #E2856E;
+  --accent-color: #F3B0A2;
   --ivory: #FDFBFB;
   --cream: #FFFFFF;
   --white: #FFFFFF;
-  --text-dark: #1A1A1A;
-  --text-muted: #4B4B4B;
-  --border-light: #E5E7EB;
+  --text-dark: #2C2422;
+  --text-muted: #73615E;
+  --border-light: #F0E4E2;
 
   /* Design System */
   --background: var(--white);
@@ -143,11 +143,11 @@
 
   0%,
   100% {
-    box-shadow: 0 0 15px rgba(142, 28, 63, 0.4);
+    box-shadow: 0 0 15px rgba(226, 133, 110, 0.4);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(142, 28, 63, 0.7);
+    box-shadow: 0 0 30px rgba(226, 133, 110, 0.7);
   }
 }
 
@@ -155,11 +155,11 @@
 
   0%,
   100% {
-    box-shadow: 0 0 15px rgba(142, 28, 63, 0.3);
+    box-shadow: 0 0 15px rgba(226, 133, 110, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(142, 28, 63, 0.5);
+    box-shadow: 0 0 30px rgba(226, 133, 110, 0.5);
   }
 }
 

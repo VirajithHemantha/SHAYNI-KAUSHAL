@@ -93,9 +93,9 @@ export default function RSVPSection() {
           <motion.div
             whileHover={{ scale: 1.08, rotate: -5 }}
             transition={{ type: "spring", bounce: 0.6 }}
-            className="relative mx-auto mb-8 w-32 h-32 md:w-44 md:h-44 rounded-full border-8 border-white bg-white shadow-[0_20px_42px_rgba(115,30,61,0.15)] p-[2px] z-10 block"
+            className="relative mx-auto mb-8 w-32 h-32 md:w-44 md:h-44 rounded-full border-8 border-white bg-white shadow-[0_20px_42px_rgba(226,133,110,0.15)] p-[2px] z-10 block"
           >
-            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[radial-gradient(circle,rgba(115,30,61,0.1),rgba(255,255,255,0.95))]">
+            <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[radial-gradient(circle,rgba(226,133,110,0.1),rgba(255,255,255,0.95))]">
               <Mail className="h-12 w-12 text-primary" />
             </div>
 
@@ -105,7 +105,7 @@ export default function RSVPSection() {
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05, rotate: 2 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(115,30,61,0.1)] backdrop-blur-md"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/45 bg-white/70 px-5 py-2.5 shadow-[0_10px_30px_rgba(226,133,110,0.1)] backdrop-blur-md"
           >
             <Sparkles className="h-5 w-5 text-primary" />
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
@@ -133,11 +133,11 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-slate-600 leading-relaxed">
-            Please respond by June 12, 2026. We would be honored to have you join our wedding celebration.
+            Please respond by June 01, 2026. We would be honored to have you join our wedding celebration.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2 text-sm text-primary font-semibold">
-            <p>Shani: 0772941952</p>
-            <p>Naveen: 0717898117</p>
+            <p>Shayni: 0772941952</p>
+            <p>Kaushal: 0717898117</p>
           </div>
         </motion.div>
 
@@ -151,7 +151,7 @@ export default function RSVPSection() {
           {/* Animated Background Envelope Flap Shape */}
           <div className="absolute -top-10 left-1/2 h-32 w-[90%] -translate-x-1/2 rounded-[2rem] bg-white/30 blur-md pointer-events-none" />
 
-          <div className="relative overflow-hidden rounded-[3rem] border border-primary/15 bg-white/90 p-6 md:p-12 shadow-[0_20px_55px_rgba(115,30,61,0.1)] backdrop-blur-2xl">
+          <div className="relative overflow-hidden rounded-[3rem] border border-primary/15 bg-white/90 p-6 md:p-12 shadow-[0_20px_55px_rgba(226,133,110,0.1)] backdrop-blur-2xl">
 
             {/* Cute internal accents */}
             <div className="absolute left-[-20%] top-[-20%] h-[300px] w-[300px] rounded-full bg-primary/5 blur-[60px]" />
@@ -181,7 +181,7 @@ export default function RSVPSection() {
                         onChange={handleChange}
                         required
                         placeholder="Your Name"
-                        className="w-full rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 text-[#1A1A1A] placeholder-slate-400 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(115,30,61,0.08)] group-hover:bg-white/90"
+                        className="w-full rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 text-[#1A1A1A] placeholder-slate-400 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(226,133,110,0.08)] group-hover:bg-white/90"
                       />
                     </div>
                   </div>
@@ -197,7 +197,7 @@ export default function RSVPSection() {
                           name="guests"
                           value={formData.guests}
                           onChange={handleChange}
-                          className="w-full appearance-none rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 pr-12 text-[#1A1A1A] outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(115,30,61,0.08)] group-hover:bg-white/90 cursor-pointer"
+                          className="w-full appearance-none rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 pr-12 text-[#1A1A1A] outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(226,133,110,0.08)] group-hover:bg-white/90 cursor-pointer"
                         >
                           <option value="1">1 Guest</option>
                           <option value="2">2 Guests</option>
@@ -223,7 +223,7 @@ export default function RSVPSection() {
                         value={formData.dietary}
                         onChange={handleChange}
                         placeholder="Any special requests"
-                        className="w-full rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 text-[#1A1A1A] placeholder-slate-400 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(115,30,61,0.08)] group-hover:bg-white/90"
+                        className="w-full rounded-2xl border border-primary/10 bg-white/65 px-5 py-4 text-[#1A1A1A] placeholder-slate-400 outline-none transition-all duration-300 focus:border-primary focus:bg-white focus:shadow-[0_10px_20px_rgba(226,133,110,0.08)] group-hover:bg-white/90"
                       />
                     </div>
                   </div>
@@ -237,7 +237,7 @@ export default function RSVPSection() {
                       onHoverEnd={() => setIsHoveringSubmit(false)}
                       type="submit"
                       disabled={isSubmitting}
-                      className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-primary px-12 py-5 text-white shadow-[0_10px_30px_rgba(115,30,61,0.3)] transition-all hover:bg-primary/90 hover:shadow-[0_15px_40px_rgba(115,30,61,0.4)] border border-primary"
+                      className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-primary px-12 py-5 text-white shadow-[0_10px_30px_rgba(226,133,110,0.3)] transition-all hover:bg-primary/90 hover:shadow-[0_15px_40px_rgba(226,133,110,0.4)] border border-primary"
                     >
                       <span className="relative z-10 font-bold tracking-[0.2em] uppercase text-sm">
                         {isSubmitting ? 'Sending...' : 'Send RSVP'}
@@ -278,7 +278,7 @@ export default function RSVPSection() {
                       rotate: [0, 10, -10, 0]
                     }}
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(115,30,61,0.1)]"
+                    className="mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-[0_10px_30px_rgba(226,133,110,0.1)]"
                   >
                     <Heart className="h-12 w-12 text-primary fill-primary" />
                   </motion.div>

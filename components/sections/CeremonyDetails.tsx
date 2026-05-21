@@ -12,26 +12,25 @@ export default function CeremonyDetails() {
   });
 
   const detailGroups = [
-
     {
       key: 'church',
       title: 'Church Ceremony',
       timeLabel: 'Ceremony Time',
-      timeValue: '2:00 PM Onward',
+      timeValue: '10:00 AM',
       venueLabel: 'Venue',
-      venueValue: "St. Anthony's Church",
-      venueSub: "Weliweriya",
-      mapLink: "https://maps.app.goo.gl/YLxk4WhENK4x5pCR8"
+      venueValue: "St. Anne’s Church",
+      venueSub: "Thalawila",
+      mapLink: "https://maps.app.goo.gl/TYPxBr1FYfAcLjqy9"
     },
     {
       key: 'reception',
       title: 'Wedding Reception',
       timeLabel: 'Arrival Time',
-      timeValue: '6:30 PM - 11:30 PM',
+      timeValue: '12:00 PM - 4:00 PM',
       venueLabel: 'Venue',
-      venueValue: "Eagles' Lagoon View",
-      venueSub: "Katunayake",
-      mapLink: "https://maps.app.goo.gl/pj2nymY27RNf1pv8A"
+      venueValue: "St. Voyage Banquet",
+      venueSub: "Navakkadu",
+      mapLink: "https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9"
     },
   ];
 
@@ -61,7 +60,7 @@ export default function CeremonyDetails() {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[500px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-[0.5px] border-primary/40 shadow-[0_40px_100px_rgba(115,30,61,0.35)] bg-[linear-gradient(145deg,#731e3d_0%,#91274d_45%,#731e3d_100%)]"
+              className="relative h-[500px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-[0.5px] border-primary/40 shadow-[0_40px_100px_rgba(226,133,110,0.35)] bg-[linear-gradient(145deg,#E2856E_0%,#F3B0A2_45%,#E2856E_100%)]"
             >
               {/* Background Video - More Clear */}
               <video
@@ -80,7 +79,7 @@ export default function CeremonyDetails() {
 
               {/* Large artistic monogram watermark */}
               <div className="absolute inset-0 flex items-center justify-center opacity-[0.1] pointer-events-none">
-                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">SN</span>
+                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">SK</span>
               </div>
 
               {/* Central Light Highlight - More Intense */}
@@ -105,7 +104,7 @@ export default function CeremonyDetails() {
                 </motion.div>
                 
                 <h3 className="relative z-10 mt-6 md:mt-8 font-serif text-5xl md:text-7xl text-white tracking-wide drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
-                  S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> N
+                  S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> K
                 </h3>
                 
                 <div className="relative z-10 mt-6 md:mt-10 flex items-center justify-center gap-5">
@@ -121,7 +120,7 @@ export default function CeremonyDetails() {
                 <div className="relative z-10 mt-8 md:mt-12 group">
                    <div className="absolute -inset-4 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
                     <p className="relative z-10 text-xs md:text-sm uppercase tracking-[0.4em] text-white font-bold border-y border-white/40 py-3 md:py-4 px-6 md:px-8 backdrop-blur-sm">
-                      June 29, 2026
+                      June 18, 2026
                     </p>
                 </div>
               </div>
@@ -140,7 +139,7 @@ export default function CeremonyDetails() {
 
               {/* Cinematic Light streaks */}
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.15)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shimmer_10s_infinite_linear] opacity-40 pointer-events-none" />
-              <div className="absolute inset-0 bg-[linear-gradient(-45deg,transparent_35%,rgba(115,30,61,0.1)_50%,transparent_65%)] bg-[length:250%_250%] animate-[shimmer_12s_infinite_linear] opacity-40" />
+              <div className="absolute inset-0 bg-[linear-gradient(-45deg,transparent_35%,rgba(226,133,110,0.1)_50%,transparent_65%)] bg-[length:250%_250%] animate-[shimmer_12s_infinite_linear] opacity-40" />
 
               {/* Cinematic Lens Flare */}
               <motion.div
@@ -186,8 +185,8 @@ export default function CeremonyDetails() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={inView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                      whileHover={{ x: 10, backgroundColor: 'rgba(115,30,61,0.08)' }}
-                      className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-white p-5 shadow-[0_10px_40px_rgba(115,30,61,0.06)] transition-all cursor-default"
+                      whileHover={{ x: 10, backgroundColor: 'rgba(226,133,110,0.08)' }}
+                      className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-white p-5 shadow-[0_10px_40px_rgba(226,133,110,0.06)] transition-all cursor-default"
                     >
                       <div className="absolute left-0 top-0 w-1 h-full bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
 

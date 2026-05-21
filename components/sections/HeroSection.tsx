@@ -14,7 +14,7 @@ export default function HeroSection() {
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
       {/* Deep Maroon Base */}
-      <div className="absolute inset-0 z-0 bg-[#731e3d]" />
+      <div className="absolute inset-0 z-0 bg-[#E2856E]" />
       
       {/* Dynamic Light Beams */}
       <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
@@ -45,7 +45,7 @@ export default function HeroSection() {
       />
 
       {/* Atmospheric Glows */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(115,30,61,0)_0%,rgba(115,30,61,0.4)_70%,rgba(115,30,61,0.8)_100%)]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(226,133,110,0)_0%,rgba(226,133,110,0.4)_70%,rgba(226,133,110,0.8)_100%)]" />
 
       {/* Floating Gold Dust */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
@@ -125,7 +125,7 @@ export default function HeroSection() {
             className="mb-10 space-y-4"
           >
             <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-              Daughter of <span className="text-white font-medium">Mr & Mrs Ganewaththa</span>
+              Daughter of <span className="text-white font-medium">Mr Janaka Dias & Mrs Anusha Thisera</span>
             </p>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-4 bg-white/10" />
@@ -133,7 +133,7 @@ export default function HeroSection() {
               <div className="h-px w-4 bg-white/10" />
             </div>
             <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-              Son of <span className="text-white font-medium">Mr & Mrs Perera (Late)</span>
+              Son of <span className="text-white font-medium">Mr Samantha Perera & Mrs Swarna Fernando</span>
             </p>
           </motion.div>
 
@@ -145,9 +145,9 @@ export default function HeroSection() {
             className="relative"
           >
             <h1 className="font-serif text-5xl font-light leading-tight tracking-[0.15em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
-              SHANI
+              SHAYNI
               <span className="block text-3xl italic text-white/50 my-4 sm:my-0 sm:inline sm:mx-8 md:text-4xl">&amp;</span>
-              NAVEEN
+              KAUSHAL
             </h1>
           </motion.div>
 
@@ -160,10 +160,10 @@ export default function HeroSection() {
           >
             <div className="h-px w-32 bg-gradient-to-r from-transparent via-white/30 to-transparent mb-6" />
             <p className="font-serif text-2xl tracking-[0.2em] text-white sm:text-3xl">
-              JUNE 29, 2026
+              JUNE 18, 2026
             </p>
             <p className="mt-2 text-[10px] uppercase tracking-[0.5em] text-white/40">
-              Gampaha, Sri Lanka
+              Thalawila, Sri Lanka
             </p>
           </motion.div>
 
