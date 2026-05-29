@@ -164,8 +164,8 @@ export default function CountdownSection() {
           </p>
         </motion.div>
 
-        <div className="rounded-[1.5rem] md:rounded-[2rem] border border-primary/20 bg-white/55 p-2 sm:p-4 md:p-8 shadow-[0_20px_70px_rgba(226,133,110,0.08)] backdrop-blur-xl">
-          <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6">
+        <div className="rounded-[1.5rem] md:rounded-[2rem] border border-primary/20 bg-white/55 p-3 sm:p-4 md:p-8 shadow-[0_20px_70px_rgba(226,133,110,0.08)] backdrop-blur-xl">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {countdownItems.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -180,7 +180,7 @@ export default function CountdownSection() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group relative"
               >
-                <div className="relative overflow-hidden rounded-[1rem] sm:rounded-[1.8rem] border border-primary/10 bg-white/90 p-2 sm:p-5 shadow-[0_12px_30px_rgba(226,133,110,0.05)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(226,133,110,0.12)] md:p-7">
+                <div className="relative overflow-hidden rounded-[1.2rem] sm:rounded-[1.8rem] border border-primary/10 bg-white/90 p-4 sm:p-5 shadow-[0_12px_30px_rgba(226,133,110,0.05)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(226,133,110,0.12)] md:p-7">
                   <div className="absolute inset-0 opacity-[0.15]"
                     style={{
                       backgroundImage:
@@ -193,7 +193,7 @@ export default function CountdownSection() {
                   <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-primary/15" />
 
                   <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                    <div className="relative flex h-[60px] w-full items-center justify-center overflow-hidden sm:h-[80px] md:h-[96px]">
+                    <div className="relative flex h-[70px] sm:h-[80px] md:h-[96px] w-full items-center justify-center overflow-hidden">
                       <AnimatePresence mode="wait" initial={false}>
                         <motion.span
                           key={item.value}
@@ -205,15 +205,15 @@ export default function CountdownSection() {
                             stiffness: 300,
                             damping: 30
                           }}
-                          className="font-serif text-3xl font-semibold text-[#1A1A1A] drop-shadow-[0_2px_8px_rgba(226,133,110,0.15)] sm:text-6xl md:text-7xl"
+                          className="font-serif text-4xl sm:text-6xl md:text-7xl font-semibold text-[#1A1A1A] drop-shadow-[0_2px_8px_rgba(226,133,110,0.15)]"
                         >
                           {String(item.value).padStart(2, '0')}
                         </motion.span>
                       </AnimatePresence>
                     </div>
 
-                    <div className="mt-2 rounded-full border border-primary/20 bg-white/75 px-2 py-1 shadow-sm sm:px-3 sm:py-1.5 md:mt-5">
-                      <p className="text-[7px] font-bold uppercase tracking-[0.1em] text-primary sm:text-[10px] md:text-xs">
+                    <div className="mt-3 rounded-full border border-primary/20 bg-white/75 px-3 py-1 shadow-sm sm:px-3 sm:py-1.5 md:mt-5">
+                      <p className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-[0.1em] text-primary">
                         {item.label}
                       </p>
                     </div>

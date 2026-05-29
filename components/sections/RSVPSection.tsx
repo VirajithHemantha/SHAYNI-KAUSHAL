@@ -136,8 +136,8 @@ export default function RSVPSection() {
             Please respond by June 01, 2026. We would be honored to have you join our wedding celebration.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2 text-sm text-primary font-semibold">
-            <p>Shayni: 0772941952</p>
-            <p>Kaushal: 0717898117</p>
+            <p>Shayni - 071 5119831</p>
+            <p>Kaushal - 074 1186516</p>
           </div>
         </motion.div>
 

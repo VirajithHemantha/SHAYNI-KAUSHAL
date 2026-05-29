@@ -20,7 +20,9 @@ export default function CeremonyDetails() {
       venueLabel: 'Venue',
       venueValue: "St. Anne’s Church",
       venueSub: "Thalawila",
-      mapLink: "https://maps.app.goo.gl/TYPxBr1FYfAcLjqy9"
+      mapLink: "https://maps.app.goo.gl/TYPxBr1FYfAcLjqy9",
+      isHighlighted: true,
+      badgeText: "Holy Matrimony"
     },
     {
       key: 'reception',
@@ -30,7 +32,8 @@ export default function CeremonyDetails() {
       venueLabel: 'Venue',
       venueValue: "St. Voyage Banquet",
       venueSub: "Navakkadu",
-      mapLink: "https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9"
+      mapLink: "https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9",
+      isHighlighted: false
     },
   ];
 
@@ -62,16 +65,14 @@ export default function CeremonyDetails() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="relative h-[500px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border-[0.5px] border-primary/40 shadow-[0_40px_100px_rgba(226,133,110,0.35)] bg-[linear-gradient(145deg,#E2856E_0%,#F3B0A2_45%,#E2856E_100%)]"
             >
-              {/* Background Video - More Clear */}
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover opacity-85 brightness-[1.05] contrast-[1.1]"
-              >
-                <source src="/35575-407595493.mp4" type="video/mp4" />
-              </video>
+              {/* Background Image */}
+              <Image
+                src="/14.jpeg"
+                alt="Ceremony Background"
+                fill
+                className="object-cover opacity-85 brightness-[1.05] contrast-[1.1]"
+                priority
+              />
 
               {/* Sophisticated Overlays for depth */}
               <div className="absolute inset-0 bg-black/5 pointer-events-none" />
@@ -177,21 +178,42 @@ export default function CeremonyDetails() {
               With immense joy in our hearts, we invite you to share our happiness as we embark on our journey together. Join us for the celebration of our love, commitment, and new beginnings.
             </p>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-6">
               {detailGroups.map((group, index) => {
+                const isHighlight = group.isHighlighted;
                 return (
                     <motion.div
                       key={group.key}
                       initial={{ opacity: 0, y: 20 }}
                       animate={inView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                      whileHover={{ x: 10, backgroundColor: 'rgba(226,133,110,0.08)' }}
-                      className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-white p-5 shadow-[0_10px_40px_rgba(226,133,110,0.06)] transition-all cursor-default"
+                      whileHover={{ x: 10, backgroundColor: isHighlight ? 'rgba(226,133,110,0.1)' : 'rgba(226,133,110,0.08)' }}
+                      className={`group relative overflow-hidden rounded-2xl border p-6 transition-all duration-300 cursor-default ${
+                        isHighlight 
+                          ? 'border-primary/50 bg-gradient-to-br from-primary/[0.05] via-[#FFFDFD] to-white shadow-[0_15px_40px_rgba(226,133,110,0.14)] ring-1 ring-primary/25' 
+                          : 'border-primary/15 bg-white shadow-[0_10px_40px_rgba(226,133,110,0.06)]'
+                      }`}
                     >
-                      <div className="absolute left-0 top-0 w-1 h-full bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
+                      <div className={`absolute left-0 top-0 h-full bg-primary transition-all duration-300 ${
+                        isHighlight 
+                          ? 'w-1.5 scale-y-100' 
+                          : 'w-1 scale-y-0 group-hover:scale-y-100 origin-bottom'
+                      }`} />
 
-                    <div className="mb-4">
-                      <p className="text-xs uppercase tracking-[0.25em] text-primary/70">{group.title} Details</p>
+                    <div className="mb-4 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        {group.key === 'church' && (
+                          <Cross className="h-5 w-5 text-primary fill-primary/15 animate-pulse" />
+                        )}
+                        <p className={`text-xs uppercase tracking-[0.25em] font-bold ${isHighlight ? 'text-primary' : 'text-primary/70'}`}>
+                          {group.title}
+                        </p>
+                      </div>
+                      {group.badgeText && (
+                        <span className="rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-primary shadow-sm">
+                          {group.badgeText}
+                        </span>
+                      )}
                     </div>
 
                     <div className="space-y-5">
