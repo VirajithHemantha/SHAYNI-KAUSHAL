@@ -29,21 +29,6 @@ export default function InviteMessage() {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          {/* Bible Verse Quote */}
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="mb-10 max-w-2xl mx-auto text-center"
-          >
-            <p className="font-serif text-xl md:text-2xl lg:text-3xl italic text-primary leading-relaxed drop-shadow-sm">
-              "I have found the one whom my soul loves."
-            </p>
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.35em] text-slate-400 mt-4">
-              — Song of Solomon 3:4 —
-            </p>
-          </motion.div>
-
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-primary/20 shadow-sm rounded-full px-5 py-2 mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Invitation</span>

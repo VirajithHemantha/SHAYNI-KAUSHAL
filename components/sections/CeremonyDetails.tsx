@@ -93,18 +93,8 @@ export default function CeremonyDetails() {
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-white/30 blur-[100px] pointer-events-none mix-blend-overlay"
               />
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center text-white">
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  className="relative z-10 inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-2 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
-                >
-                  <Heart className="h-4 w-4 text-white fill-white/20" />
-                  <p className="text-[10px] uppercase tracking-[0.4em] text-white font-bold">Joined as One</p>
-                </motion.div>
-                
-                <h3 className="relative z-10 mt-6 md:mt-8 font-serif text-5xl md:text-7xl text-white tracking-wide drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
+              <div className="relative z-10 flex h-full flex-col items-center justify-end md:justify-center px-6 pb-12 md:py-8 text-center text-white">
+                <h3 className="relative z-10 font-serif text-3xl md:text-7xl text-white tracking-wide drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
                   S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> K
                 </h3>
                 
@@ -118,23 +108,33 @@ export default function CeremonyDetails() {
                   "Two hearts, one love, and a beautiful journey begins."
                 </p>
                 
-                <div className="relative z-10 mt-8 md:mt-12 group">
+                <div className="relative z-10 mt-6 md:mt-10 group">
                    <div className="absolute -inset-4 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
                     <p className="relative z-10 text-xs md:text-sm uppercase tracking-[0.4em] text-white font-bold border-y border-white/40 py-3 md:py-4 px-6 md:px-8 backdrop-blur-sm">
                       June 18, 2026
                     </p>
                 </div>
+
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 1, delay: 0.4 }}
+                  className="relative z-10 mt-6 md:mt-8 inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-2 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
+                >
+                  <Heart className="h-4 w-4 text-white fill-white/20" />
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-white font-bold">Joined as One</p>
+                </motion.div>
               </div>
 
               {/* Elegant floating badge */}
               <motion.div
                 animate={{ y: [0, -15, 0], rotate: [0, 3, -3, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-6 top-20 flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-[0_0_50px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+                className="absolute -right-3 md:-right-6 top-10 md:top-20 flex h-20 w-20 md:h-36 md:w-36 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-[0_0_50px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
               >
                 <div className="text-center">
-                  <Crown className="mx-auto h-10 w-10 text-white" />
-                  <span className="mt-2 block text-[10px] font-bold uppercase tracking-[0.4em] text-white">Forever</span>
+                  <Crown className="mx-auto h-6 w-6 md:h-10 md:w-10 text-white" />
+                  <span className="mt-1 md:mt-2 block text-[8px] md:text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-white">Forever</span>
                 </div>
               </motion.div>
 
