@@ -133,7 +133,7 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-slate-600 leading-relaxed">
-            Please respond by June 01, 2026. We would be honored to have you join our wedding celebration.
+            Please respond before June 10, 2026. We would be honored to have you join our wedding celebration.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2 text-sm text-primary font-semibold">
             <p>Shayni - 071 5119831</p>

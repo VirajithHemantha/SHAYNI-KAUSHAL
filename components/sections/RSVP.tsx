@@ -81,7 +81,7 @@ export default function RSVP() {
             RSVP
           </h2>
           <p className="text-lg font-light text-foreground mb-4">
-            Please confirm your attendance by June 10, 2026
+            Please confirm your attendance before June 10, 2026
           </p>
           <div
             className="w-16 h-1 mx-auto"
