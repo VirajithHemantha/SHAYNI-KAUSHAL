@@ -12,21 +12,47 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [canProceed, setCanProceed] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
+  const handleProceed = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setShowContent(true);
+    onEnvelopeOpen();
+  };
 
   const handleEnvelopeClick = () => {
-    if (isAnimating || isOpen) return;
+    if (isOpen) {
+      if (canProceed) {
+        handleProceed();
+      }
+      return;
+    }
+    if (isAnimating) return;
 
     setIsAnimating(true);
     setIsOpen(true);
 
-
-
+    // Allow manual skip/proceed after the card is fully emerged (approx 1.8 seconds)
     setTimeout(() => {
-      setShowContent(true);
-      onEnvelopeOpen();
-    }, 3200); // Slightly longer for the premium animation
+      setCanProceed(true);
+    }, 1800);
+
+    // Auto-proceed after a generous reading time of 15 seconds
+    timeoutRef.current = setTimeout(() => {
+      handleProceed();
+    }, 10000);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({
@@ -499,7 +525,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                   className="group relative overflow-hidden rounded-full bg-white/10 px-10 py-3 backdrop-blur-md transition-all hover:bg-white/20 active:scale-95"
                 >
                   <div className="absolute inset-0 border border-white/20 rounded-full" />
-                  <span className="relative z-10 text-[12px] font-bold uppercase tracking-[0.4em] text-white px-2">
+                  <span className="relative z-10 text-[12px] font-bold uppercase tracking-[0.45em] text-white px-2">
                     Tap Seal to Open
                   </span>
                   <motion.div

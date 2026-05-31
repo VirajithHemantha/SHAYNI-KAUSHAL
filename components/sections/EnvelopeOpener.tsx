@@ -12,21 +12,47 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [canProceed, setCanProceed] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
+  const handleProceed = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setShowContent(true);
+    onEnvelopeOpen();
+  };
 
   const handleEnvelopeClick = () => {
-    if (isAnimating || isOpen) return;
+    if (isOpen) {
+      if (canProceed) {
+        handleProceed();
+      }
+      return;
+    }
+    if (isAnimating) return;
 
     setIsAnimating(true);
     setIsOpen(true);
 
-
-
+    // Allow manual skip/proceed after the card is fully emerged (approx 1.8 seconds)
     setTimeout(() => {
-      setShowContent(true);
-      onEnvelopeOpen();
-    }, 3200); // Slightly longer for the premium animation
+      setCanProceed(true);
+    }, 1800);
+
+    // Auto-proceed after a generous reading time of 15 seconds
+    timeoutRef.current = setTimeout(() => {
+      handleProceed();
+    }, 15000);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({
