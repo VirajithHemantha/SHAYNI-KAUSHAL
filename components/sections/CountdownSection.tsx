@@ -12,13 +12,19 @@ interface TimeLeft {
   seconds: number;
 }
 
-export default function CountdownSection() {
+interface CountdownSectionProps {
+  isHomecoming?: boolean;
+}
+
+export default function CountdownSection({ isHomecoming = false }: CountdownSectionProps) {
   const { ref, inView } = useInView({
     threshold: 0.15,
     triggerOnce: true,
   });
 
-  const targetDate = useMemo(() => new Date('2026-06-18T10:00:00').getTime(), []);
+  const targetDate = useMemo(() => {
+    return new Date(isHomecoming ? '2026-06-20T19:00:00' : '2026-06-18T10:00:00').getTime();
+  }, [isHomecoming]);
 
   const getTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();
@@ -134,7 +140,7 @@ export default function CountdownSection() {
           >
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-primary sm:text-sm">
-              The Big Day Approaches
+              {isHomecoming ? 'The Celebration Approaches' : 'The Big Day Approaches'}
             </span>
             <Sparkles className="h-4 w-4 text-primary" />
           </motion.div>
@@ -160,7 +166,9 @@ export default function CountdownSection() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Every second brings us closer to our beautiful wedding day. We cannot wait to celebrate this special moment with you.
+            {isHomecoming
+              ? 'Every second brings us closer to our beautiful homecoming day. We cannot wait to celebrate this special moment with you.'
+              : 'Every second brings us closer to our beautiful wedding day. We cannot wait to celebrate this special moment with you.'}
           </p>
         </motion.div>
 

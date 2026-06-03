@@ -5,10 +5,11 @@ interface SubmitPayload {
   name: string;
   guests?: string;
   dietary?: string;
+  source?: string;
 }
 
 export async function submitToGoogleSheets(payload: SubmitPayload): Promise<void> {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwppxH_6R4d_8xrBvSdujD3ClPWsLkMKUSn-IZKo59DeqqfLTASUEj_yd4nBwzVCbEhPg/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbzq3VpuULE1TEUFk36Nx5dVLtPyxVkJ4e_dpJBNTiOuk6XqDyrj5qq0guA_o0AnzTolQw/exec';
 
   await fetch(scriptUrl, {
     method: 'POST',
@@ -19,7 +20,7 @@ export async function submitToGoogleSheets(payload: SubmitPayload): Promise<void
     body: JSON.stringify({
       ...payload,
       submittedAt: new Date().toISOString(),
-      source: 'wedding-site',
+      source: payload.source || 'wedding-site',
     }),
   });
 }

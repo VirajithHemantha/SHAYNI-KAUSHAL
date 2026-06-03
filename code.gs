@@ -8,11 +8,26 @@ function doPost(e) {
 
     var formType = String(payload.formType || '').toLowerCase();
     var submittedAt = payload.submittedAt || new Date().toISOString();
+    var source = String(payload.source || 'wedding-site').toLowerCase();
+    var isHomecoming = source.indexOf('homecoming') !== -1 || source.indexOf('homecomming') !== -1;
+
+    var rsvpSheetName = 'rsvp';
+    var wishSheetName = 'wish';
+
+    if (isHomecoming) {
+      if (source.indexOf('homecomming') !== -1) {
+        rsvpSheetName = 'homecomming_rsvp';
+        wishSheetName = 'homecomming_wish';
+      } else {
+        rsvpSheetName = 'homecoming_rsvp';
+        wishSheetName = 'homecoming_wish';
+      }
+    }
 
     if (formType === 'rsvp') {
-      var rsvpSheet = ss.getSheetByName('rsvp');
+      var rsvpSheet = ss.getSheetByName(rsvpSheetName);
       if (!rsvpSheet) {
-        rsvpSheet = ss.insertSheet('rsvp');
+        rsvpSheet = ss.insertSheet(rsvpSheetName);
       }
 
       if (rsvpSheet.getLastRow() === 0) {
@@ -27,9 +42,9 @@ function doPost(e) {
         payload.source || 'website',
       ]);
     } else if (formType === 'wish') {
-      var wishSheet = ss.getSheetByName('wish');
+      var wishSheet = ss.getSheetByName(wishSheetName);
       if (!wishSheet) {
-        wishSheet = ss.insertSheet('wish');
+        wishSheet = ss.insertSheet(wishSheetName);
       }
 
       if (wishSheet.getLastRow() === 0) {

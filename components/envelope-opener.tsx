@@ -6,9 +6,10 @@ import { Heart } from 'lucide-react';
 
 interface EnvelopeOpenerProps {
   onEnvelopeOpen: () => void;
+  isHomecoming?: boolean;
 }
 
-export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
+export function EnvelopeOpener({ onEnvelopeOpen, isHomecoming = false }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -49,10 +50,10 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
       setCanProceed(true);
     }, 1800);
 
-    // Auto-proceed after a generous reading time of 15 seconds
+    // Auto-proceed after a generous reading time of 5 seconds
     timeoutRef.current = setTimeout(() => {
       handleProceed();
-    }, 10000);
+    }, 5000);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({
@@ -85,7 +86,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(226,133,110,0.12),transparent_35%),linear-gradient(135deg,#1a0408_0%,#2c0710_38%,#3e0d19_65%,#0a1a0d_100%)]" />
+          <div className={`absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,2,4,0.12),transparent_35%),linear-gradient(135deg,${isHomecoming ? '#120003_0%,#30030a_38%,#4a0612_65%,#120003_100%' : '#1a0408_0%,#2c0710_38%,#3e0d19_65%,#0a1a0d_100%'})]`} />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -192,7 +193,11 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 }}
               >
                 <div
-                  className="h-5 w-3 rounded-full bg-gradient-to-b from-[#ffccd5] via-primary to-[#D1755E] shadow-[0_0_14px_rgba(226,133,110,0.18)]"
+                  className={`h-5 w-3 rounded-full bg-gradient-to-b ${
+                    isHomecoming 
+                      ? 'from-[#f5c6cc] via-[#a32a3f] to-[#4a0b14]' 
+                      : 'from-[#ffccd5] via-primary to-[#D1755E]'
+                  } shadow-[0_0_14px_rgba(226,133,110,0.18)]`}
                   style={{
                     transform: `scale(${petal.scale}) rotate(18deg)`,
                     borderRadius: '70% 30% 70% 30% / 70% 30% 70% 30%',
@@ -359,9 +364,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         className="translate-y-4"
                       >
                         <h3 className="font-serif text-[1rem] sm:text-[1.3rem] tracking-[0.08em] text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-2 sm:gap-4">
-                          <span>SHAYNI</span>
+                          <span>{isHomecoming ? 'KAUSHAL' : 'SHAYNI'}</span>
                           <span aria-hidden="true">&amp;</span>
-                          <span>KAUSHAL</span>
+                          <span>{isHomecoming ? 'SHAYNI' : 'KAUSHAL'}</span>
                         </h3>
                         <div className="mt-4 flex items-center justify-center gap-3">
                           <span className="h-px w-10 bg-primary/50" />
@@ -407,7 +412,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
 
                         {/* Monogram with premium styling */}
                         <span className="relative z-10 font-serif text-lg text-white font-medium tracking-widest drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mb-2">
-                          S <span className="text-[10px] align-middle opacity-80">✦</span> K
+                          {isHomecoming ? 'K ✦ S' : 'S ✦ K'}
                         </span>
 
                         {/* Shine overlay */}
@@ -418,9 +423,19 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       <svg width="0" height="0" className="absolute">
                         <defs>
                           <radialGradient id="waxGradientStandalone" cx="35%" cy="35%" r="65%">
-                            <stop offset="0%" stopColor="#F3B0A2" />
-                            <stop offset="60%" stopColor="#E2856E" />
-                            <stop offset="100%" stopColor="#D1755E" />
+                            {isHomecoming ? (
+                              <>
+                                <stop offset="0%" stopColor="#8D2B3F" />
+                                <stop offset="60%" stopColor="#6B1D2F" />
+                                <stop offset="100%" stopColor="#4A0E1A" />
+                              </>
+                            ) : (
+                              <>
+                                <stop offset="0%" stopColor="#F3B0A2" />
+                                <stop offset="60%" stopColor="#E2856E" />
+                                <stop offset="100%" stopColor="#D1755E" />
+                              </>
+                            )}
                           </radialGradient>
                         </defs>
                       </svg>
@@ -461,23 +476,38 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       {/* Card frame */}
                       <div className="absolute inset-3 rounded-[18px] border border-primary/25" />
                       <div className="absolute left-1/2 top-4 h-8 w-8 -translate-x-1/2 rounded-full border border-primary/50 bg-white text-center text-[10px] leading-8 text-primary font-bold">
-                        SK
+                        {isHomecoming ? 'KS' : 'SK'}
                       </div>
 
                       {/* Card ornament */}
                       <div className="relative text-center">
                         <div className="space-y-2 mb-3">
                           <p className="text-[9px] uppercase tracking-[0.28em] text-primary">
-                            Together with their families
+                            {isHomecoming ? "Groom's Parents invite you" : 'Together with their families'}
                           </p>
-                          <p className="text-[9px] leading-5 text-slate-500">
-                            Bride, the loving daughter of<br />
-                            <span className="font-semibold text-primary">Mr Janaka Dias & Mrs Anusha Thisera</span>
-                          </p>
-                          <p className="text-[9px] leading-5 text-slate-500">
-                            Groom, the loving son of<br />
-                            <span className="font-semibold text-primary">Mr Samantha Perera & Mrs Swarna Fernando</span>
-                          </p>
+                          {isHomecoming ? (
+                            <>
+                              <p className="text-[9px] leading-5 text-slate-500">
+                                Groom, the loving son of<br />
+                                <span className="font-semibold text-primary">Mr Samantha Perera & Mrs Swarna Fernando</span>
+                              </p>
+                              <p className="text-[9px] leading-5 text-slate-500">
+                                Bride, the loving daughter of<br />
+                                <span className="font-semibold text-primary">Mr Janaka Dias & Mrs Anusha Thisera</span>
+                              </p>
+                            </>
+                          ) : (
+                            <>
+                              <p className="text-[9px] leading-5 text-slate-500">
+                                Bride, the loving daughter of<br />
+                                <span className="font-semibold text-primary">Mr Janaka Dias & Mrs Anusha Thisera</span>
+                              </p>
+                              <p className="text-[9px] leading-5 text-slate-500">
+                                Groom, the loving son of<br />
+                                <span className="font-semibold text-primary">Mr Samantha Perera & Mrs Swarna Fernando</span>
+                              </p>
+                            </>
+                          )}
                         </div>
 
                         <div className="mt-4 flex items-center justify-center gap-3">
@@ -487,15 +517,17 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <h2 className="mt-5 font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          SHAYNI
+                          {isHomecoming ? 'KAUSHAL' : 'SHAYNI'}
                         </h2>
-                        <p className="mt-1 font-serif text-lg italic text-secondary">&</p>
+                        <p className="mt-1 font-serif text-lg italic text-secondary">&amp;</p>
                         <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-[0.08em] text-primary">
-                          KAUSHAL
+                          {isHomecoming ? 'SHAYNI' : 'KAUSHAL'}
                         </h2>
 
                         <p className="mx-auto mt-5 max-w-[240px] text-[12px] sm:text-sm leading-7 text-slate-600">
-                          Invite you to witness our wedding ceremony filled with love and joy.
+                          {isHomecoming 
+                            ? 'Invite you to witness our beautiful homecoming ceremony filled with love, tradition, and joy.'
+                            : 'Invite you to witness our wedding ceremony filled with love and joy.'}
                         </p>
 
                         <div className="mt-6 flex items-center justify-center gap-3">
@@ -505,7 +537,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                         </div>
 
                         <p className="mt-5 text-[11px] uppercase tracking-[0.36em] text-primary">
-                          June 18, 2026
+                          {isHomecoming ? 'June 20, 2026' : 'June 18, 2026'}
                         </p>
                       </div>
                     </div>

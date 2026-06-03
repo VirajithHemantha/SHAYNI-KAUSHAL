@@ -5,37 +5,56 @@ import { useInView } from 'react-intersection-observer';
 import { Clock3, MapPin, Sparkles, Crown, Heart, Cross } from 'lucide-react';
 import Image from 'next/image';
 
-export default function CeremonyDetails() {
+interface CeremonyDetailsProps {
+  isHomecoming?: boolean;
+}
+
+export default function CeremonyDetails({ isHomecoming = false }: CeremonyDetailsProps) {
   const { ref, inView } = useInView({
     threshold: 0.15,
     triggerOnce: true,
   });
 
-  const detailGroups = [
-    {
-      key: 'church',
-      title: 'Church Ceremony',
-      timeLabel: 'Ceremony Time',
-      timeValue: '10:00 AM',
-      venueLabel: 'Venue',
-      venueValue: "St. Anne’s Church",
-      venueSub: "Thalawila",
-      mapLink: "https://maps.app.goo.gl/TYPxBr1FYfAcLjqy9",
-      isHighlighted: true,
-      badgeText: "Holy Matrimony"
-    },
-    {
-      key: 'reception',
-      title: 'Wedding Reception',
-      timeLabel: 'Arrival Time',
-      timeValue: '12:00 PM - 4:00 PM',
-      venueLabel: 'Venue',
-      venueValue: "St. Voyage Banquet",
-      venueSub: "Navakkadu",
-      mapLink: "https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9",
-      isHighlighted: false
-    },
-  ];
+  const detailGroups = isHomecoming 
+    ? [
+        {
+          key: 'homecoming',
+          title: 'Homecoming Reception',
+          timeLabel: 'Reception Time',
+          timeValue: '7:00 PM - 12:00 AM',
+          venueLabel: 'Venue',
+          venueValue: "Far Inn Village",
+          venueSub: "Chilaw",
+          mapLink: "https://www.google.com/maps/search/?api=1&query=Chilaw+Far+Inn+Village",
+          isHighlighted: true,
+          badgeText: "Celebration"
+        }
+      ]
+    : [
+        {
+          key: 'church',
+          title: 'Church Ceremony',
+          timeLabel: 'Ceremony Time',
+          timeValue: '10:00 AM',
+          venueLabel: 'Venue',
+          venueValue: "St. Anne’s Church",
+          venueSub: "Thalawila",
+          mapLink: "https://maps.app.goo.gl/TYPxBr1FYfAcLjqy9",
+          isHighlighted: true,
+          badgeText: "Holy Matrimony"
+        },
+        {
+          key: 'reception',
+          title: 'Wedding Reception',
+          timeLabel: 'Arrival Time',
+          timeValue: '12:00 PM - 4:00 PM',
+          venueLabel: 'Venue',
+          venueValue: "St. Voyage Banquet",
+          venueSub: "Navakkadu",
+          mapLink: "https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9",
+          isHighlighted: false
+        },
+      ];
 
   return (
     <section
@@ -80,7 +99,9 @@ export default function CeremonyDetails() {
 
               {/* Large artistic monogram watermark */}
               <div className="absolute inset-0 flex items-center justify-center opacity-[0.1] pointer-events-none">
-                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">SK</span>
+                <span className="font-serif text-[18rem] md:text-[22rem] text-white/50 tracking-tighter select-none">
+                  {isHomecoming ? 'KS' : 'SK'}
+                </span>
               </div>
 
               {/* Central Light Highlight - More Intense */}
@@ -95,7 +116,15 @@ export default function CeremonyDetails() {
 
               <div className="relative z-10 flex h-full flex-col items-center justify-end md:justify-center px-6 pb-12 md:py-8 text-center text-white">
                 <h3 className="relative z-10 font-serif text-3xl md:text-7xl text-white tracking-wide drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
-                  S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> K
+                  {isHomecoming ? (
+                    <>
+                      K <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> S
+                    </>
+                  ) : (
+                    <>
+                      S <span className="text-primary italic drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">&amp;</span> K
+                    </>
+                  )}
                 </h3>
                 
                 <div className="relative z-10 mt-6 md:mt-10 flex items-center justify-center gap-5">
@@ -111,7 +140,7 @@ export default function CeremonyDetails() {
                 <div className="relative z-10 mt-6 md:mt-10 group">
                    <div className="absolute -inset-4 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
                     <p className="relative z-10 text-xs md:text-sm uppercase tracking-[0.4em] text-white font-bold border-y border-white/40 py-3 md:py-4 px-6 md:px-8 backdrop-blur-sm">
-                      June 18, 2026
+                      {isHomecoming ? 'June 20, 2026' : 'June 18, 2026'}
                     </p>
                 </div>
 
@@ -165,17 +194,19 @@ export default function CeremonyDetails() {
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 backdrop-blur-sm">
               <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-xs uppercase tracking-[0.3em] text-primary font-medium">
-                The Wedding Celebration
+                {isHomecoming ? 'The Homecoming Celebration' : 'The Wedding Celebration'}
               </span>
             </div>
 
             <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-[#1A1A1A] md:text-7xl">
-              Wedding <br />
-              <span className="italic text-primary">Ceremony</span>
+              {isHomecoming ? 'Homecoming' : 'Wedding'} <br />
+              <span className="italic text-primary">{isHomecoming ? 'Reception' : 'Ceremony'}</span>
             </h2>
 
             <p className="mb-12 text-lg leading-relaxed text-[#4B4B4B] max-w-lg">
-              With immense joy in our hearts, we invite you to share our happiness as we embark on our journey together. Join us for the celebration of our love, commitment, and new beginnings.
+              {isHomecoming
+                ? 'We are delighted to invite you to celebrate our homecoming with us. Your love, support, and presence mean the world to us as we begin this beautiful chapter as husband and wife.'
+                : 'With immense joy in our hearts, we invite you to share our happiness as we embark on our journey together. Join us for the celebration of our love, commitment, and new beginnings.'}
             </p>
 
             <div className="flex flex-col gap-6">

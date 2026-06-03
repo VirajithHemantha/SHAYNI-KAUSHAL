@@ -15,7 +15,11 @@ interface Blessing {
 
 const initialBlessings: Blessing[] = [];
 
-export default function BlessingsSection() {
+interface BlessingsSectionProps {
+  isHomecoming?: boolean;
+}
+
+export default function BlessingsSection({ isHomecoming = false }: BlessingsSectionProps) {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
 
   const [blessings, setBlessings] = useState<Blessing[]>(initialBlessings);
@@ -50,6 +54,7 @@ export default function BlessingsSection() {
           formType: 'wish',
           name: visitorName.trim(),
           message: newBlessing.trim(),
+          source: isHomecoming ? 'homecoming-site' : 'wedding-site',
         });
 
         const blessing: Blessing = {

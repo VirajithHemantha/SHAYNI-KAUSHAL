@@ -49,10 +49,10 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
       setCanProceed(true);
     }, 1800);
 
-    // Auto-proceed after a generous reading time of 15 seconds
+    // Auto-proceed after a generous reading time of 5 seconds
     timeoutRef.current = setTimeout(() => {
       handleProceed();
-    }, 15000);
+    }, 5000);
   };
 
   const petals = Array.from({ length: 16 }).map((_, i) => ({

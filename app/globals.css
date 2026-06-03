@@ -38,6 +38,19 @@
   --radius: 0.5rem;
 }
 
+/* Homecoming Maroon Theme override class */
+.theme-homecoming {
+  --primary-color: #6B1D2F; /* Rich Deep Maroon */
+  --accent-color: #8D2B3F;  /* Accent Crimson */
+  --ring: #6B1D2F;
+  --border-light: #F2E5E7;
+  
+  --primary: var(--primary-color);
+  --secondary: var(--primary-color);
+  --accent: var(--accent-color);
+  --border: var(--border-light);
+}
+
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback';
   --font-serif: 'Playfair Display', 'Playfair Display Fallback';

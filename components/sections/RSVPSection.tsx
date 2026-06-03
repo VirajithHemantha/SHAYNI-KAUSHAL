@@ -6,7 +6,11 @@ import { useInView } from 'react-intersection-observer';
 import { Send, Heart, Mail, User, Users, Coffee, Sparkles } from 'lucide-react';
 import { submitToGoogleSheets } from '@/lib/googleSheets';
 
-export default function RSVPSection() {
+interface RSVPSectionProps {
+  isHomecoming?: boolean;
+}
+
+export default function RSVPSection({ isHomecoming = false }: RSVPSectionProps) {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
   const [formData, setFormData] = useState({
     name: '',
@@ -37,6 +41,7 @@ export default function RSVPSection() {
         name: formData.name,
         guests: formData.guests,
         dietary: formData.dietary,
+        source: isHomecoming ? 'homecoming-site' : 'wedding-site',
       });
 
       setSubmitted(true);
@@ -133,11 +138,22 @@ export default function RSVPSection() {
             </span>
           </h2>
           <p className="mx-auto mt-8 max-w-lg text-lg text-slate-600 leading-relaxed">
-            Please respond before June 10, 2026. We would be honored to have you join our wedding celebration.
+            {isHomecoming 
+              ? 'Please respond before June 12, 2026. We would be honored to have you join our homecoming celebration.'
+              : 'Please respond before June 10, 2026. We would be honored to have you join our wedding celebration.'}
           </p>
           <div className="mt-4 flex flex-col items-center gap-2 text-sm text-primary font-semibold">
-            <p>Shayni - 071 5119831</p>
-            <p>Kaushal - 074 1186516</p>
+            {isHomecoming ? (
+              <>
+                <p>Kaushal - 074 1186516</p>
+                <p>Shayni - 071 5119831</p>
+              </>
+            ) : (
+              <>
+                <p>Shayni - 071 5119831</p>
+                <p>Kaushal - 074 1186516</p>
+              </>
+            )}
           </div>
         </motion.div>
 

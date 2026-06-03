@@ -3,9 +3,16 @@
 import { motion } from 'framer-motion';
 import { Heart, MapPin, Sparkles } from 'lucide-react';
 
-const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9';
+interface FooterSectionProps {
+  isHomecoming?: boolean;
+}
 
-export default function FooterSection() {
+export default function FooterSection({ isHomecoming = false }: FooterSectionProps) {
+  const liveLocationUrl = isHomecoming 
+    ? 'https://www.google.com/maps/search/?api=1&query=Chilaw+Far+Inn+Village' 
+    : 'https://maps.app.goo.gl/iHw4TTdsmLA8JdUZ9';
+  const venueName = isHomecoming ? 'Far Inn Village' : 'St. Voyage Banquet';
+  const venueSub = isHomecoming ? 'Chilaw' : 'Navakkadu';
   return (
     <footer className="relative overflow-hidden bg-[#FDFBFB] border-t border-primary/10 pt-12 pb-8 md:pt-20 md:pb-12 text-[#1A1A1A]">
 
@@ -34,21 +41,29 @@ export default function FooterSection() {
             </div>
 
             <h2 className="mb-6 font-serif text-5xl font-light tracking-wide text-primary md:text-6xl">
-              S <span className="text-3xl text-primary/40">&</span> K
+              {isHomecoming ? (
+                <>
+                  K <span className="text-3xl text-primary/40">&amp;</span> S
+                </>
+              ) : (
+                <>
+                  S <span className="text-3xl text-primary/40">&amp;</span> K
+                </>
+              )}
             </h2>
             <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-[#4B4B4B]">
               We look forward to sharing our joy and celebrating our union surrounded by the people we love most.
             </p>
             <a
-              href={LIVE_LOCATION_URL}
+              href={liveLocationUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-7 inline-flex items-center justify-center gap-2 self-center rounded-full border border-primary/25 bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sm transition-all hover:bg-primary/5 hover:border-primary/40"
             >
               <MapPin className="h-4 w-4" />
-              <div className="flex flex-col items-start">
-                <span>St. Voyage Banquet</span>
-                <span className="text-[10px] opacity-70 normal-case font-normal">Navakkadu</span>
+              <div className="flex flex-col items-start text-left">
+                <span>{venueName}</span>
+                <span className="text-[10px] opacity-70 normal-case font-normal">{venueSub}</span>
               </div>
             </a>
           </motion.div>
@@ -71,7 +86,7 @@ export default function FooterSection() {
         <div className="flex flex-col items-center justify-between gap-4 px-4 text-center text-xs font-light tracking-[0.1em] text-primary md:flex-row md:text-left">
           <div className="space-y-2">
             <p className="!text-primary/70">
-              &copy; {new Date().getFullYear()} SHAYNI & KAUSHAL. All rights reserved.
+              &copy; {new Date().getFullYear()} {isHomecoming ? 'KAUSHAL & SHAYNI' : 'SHAYNI & KAUSHAL'}. All rights reserved.
             </p>
             <p className="!text-primary/70">
               Design and created by <span className="!text-primary font-medium">InviteMint</span> | Connect WhatsApp: <a href="https://wa.me/94707819074" target="_blank" rel="noopener noreferrer" className="!text-primary hover:underline font-medium">+94 70 781 9074</a>

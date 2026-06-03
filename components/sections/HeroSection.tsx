@@ -5,7 +5,11 @@ import { useInView } from 'react-intersection-observer';
 import { Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  isHomecoming?: boolean;
+}
+
+export default function HeroSection({ isHomecoming = false }: HeroSectionProps) {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
@@ -13,39 +17,64 @@ export default function HeroSection() {
       ref={ref}
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
-      {/* Deep Maroon Base */}
-      <div className="absolute inset-0 z-0 bg-[#E2856E]" />
-      
-      {/* Dynamic Light Beams */}
-      <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
-        <motion.div
-          animate={{
-            rotate: [0, 5, 0],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -left-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_0deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.1)_25%,transparent_50%)] blur-3xl"
-        />
-        <motion.div
-          animate={{
-            rotate: [0, -5, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute -right-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_180deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.08)_25%,transparent_50%)] blur-3xl"
-        />
-      </div>
+      {/* Background Base / Image */}
+      {isHomecoming ? (
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/h.png" 
+            alt="Hero Background" 
+            fill 
+            className="object-cover"
+            priority
+          />
+        </div>
+      ) : (
+        <>
+          <div className="absolute inset-0 z-0 bg-[#E2856E]" />
+          
+          {/* Dynamic Light Beams */}
+          <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
+            <motion.div
+              animate={{
+                rotate: [0, 5, 0],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -left-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_0deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.1)_25%,transparent_50%)] blur-3xl"
+            />
+            <motion.div
+              animate={{
+                rotate: [0, -5, 0],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -right-[20%] -top-[10%] h-[150%] w-[60%] bg-[conic-gradient(from_180deg_at_50%_0%,transparent_0%,rgba(255,255,255,0.08)_25%,transparent_50%)] blur-3xl"
+            />
+          </div>
 
-      {/* Decorative Royal Pattern Overlay */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] mix-blend-overlay"
-        style={{ 
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L50 0 M50 50 L100 50 M50 50 L50 100 M50 50 L0 50' stroke='white' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2' fill='white'/%3E%3C/svg%3E")`,
-          backgroundSize: '80px 80px'
-        }} 
-      />
+          {/* Decorative Royal Pattern Overlay */}
+          <div className="absolute inset-0 z-0 opacity-[0.03] mix-blend-overlay"
+            style={{ 
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 L50 0 M50 50 L100 50 M50 50 L50 100 M50 50 L0 50' stroke='white' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2' fill='white'/%3E%3C/svg%3E")`,
+              backgroundSize: '80px 80px'
+            }} 
+          />
 
-      {/* Atmospheric Glows */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(226,133,110,0)_0%,rgba(226,133,110,0.4)_70%,rgba(226,133,110,0.8)_100%)]" />
+          {/* Atmospheric Glows */}
+          <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(226,133,110,0)_0%,rgba(226,133,110,0.4)_70%,rgba(226,133,110,0.8)_100%)]" />
+
+          {/* Mobile-only Background Image */}
+          <div className="absolute inset-0 z-0 block md:hidden">
+            <Image 
+              src="/o.png" 
+              alt="Hero Background" 
+              fill 
+              className="object-cover"
+              priority
+            />
+          </div>
+        </>
+      )}
 
       {/* Floating Gold Dust */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
@@ -73,17 +102,6 @@ export default function HeroSection() {
             }}
           />
         ))}
-      </div>
-
-      {/* Mobile-only Background Image */}
-      <div className="absolute inset-0 z-0 block md:hidden">
-        <Image 
-          src="/o.png" 
-          alt="Hero Background" 
-          fill 
-          className="object-cover"
-          priority
-        />
       </div>
 
       <div className="relative z-20 mx-auto hidden md:flex min-h-[100svh] w-full max-w-6xl flex-col items-center justify-center px-4 pb-16 pt-12 text-center sm:px-8">
@@ -124,17 +142,35 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.8 }}
             className="mb-10 space-y-4"
           >
-            <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-              Daughter of <span className="text-white font-medium">Mr Janaka Dias & Mrs Anusha Thisera</span>
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-4 bg-white/10" />
-              <Heart className="h-3 w-3 text-white/40 fill-white/10" />
-              <div className="h-px w-4 bg-white/10" />
-            </div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-              Son of <span className="text-white font-medium">Mr Samantha Perera & Mrs Swarna Fernando</span>
-            </p>
+            {isHomecoming ? (
+              <>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  Son of <span className="text-white font-medium">Mr Samantha Perera & Mrs Swarna Fernando</span>
+                </p>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="h-px w-4 bg-white/10" />
+                  <Heart className="h-3 w-3 text-white/40 fill-white/10" />
+                  <div className="h-px w-4 bg-white/10" />
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  Daughter of <span className="text-white font-medium">Mr Janaka Dias & Mrs Anusha Thisera</span>
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  Daughter of <span className="text-white font-medium">Mr Janaka Dias & Mrs Anusha Thisera</span>
+                </p>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="h-px w-4 bg-white/10" />
+                  <Heart className="h-3 w-3 text-white/40 fill-white/10" />
+                  <div className="h-px w-4 bg-white/10" />
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  Son of <span className="text-white font-medium">Mr Samantha Perera & Mrs Swarna Fernando</span>
+                </p>
+              </>
+            )}
           </motion.div>
 
           {/* Main Names with Enhanced Typography */}
@@ -145,9 +181,9 @@ export default function HeroSection() {
             className="relative"
           >
             <h1 className="font-serif text-5xl font-light leading-tight tracking-[0.15em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
-              SHAYNI
+              {isHomecoming ? 'KAUSHAL' : 'SHAYNI'}
               <span className="block text-3xl italic text-white/50 my-4 sm:my-0 sm:inline sm:mx-8 md:text-4xl">&amp;</span>
-              KAUSHAL
+              {isHomecoming ? 'SHAYNI' : 'KAUSHAL'}
             </h1>
           </motion.div>
 
@@ -160,10 +196,10 @@ export default function HeroSection() {
           >
             <div className="h-px w-32 bg-gradient-to-r from-transparent via-white/30 to-transparent mb-6" />
             <p className="font-serif text-2xl tracking-[0.2em] text-white sm:text-3xl">
-              JUNE 18, 2026
+              {isHomecoming ? 'JUNE 20, 2026' : 'JUNE 18, 2026'}
             </p>
             <p className="mt-2 text-[10px] uppercase tracking-[0.5em] text-white/40">
-              Thalawila, Sri Lanka
+              {isHomecoming ? 'Far Inn Village, Chilaw' : 'Thalawila, Sri Lanka'}
             </p>
           </motion.div>
 
