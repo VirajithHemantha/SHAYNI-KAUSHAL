@@ -86,7 +86,14 @@ export function EnvelopeOpener({ onEnvelopeOpen, isHomecoming = false }: Envelop
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className={`absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,2,4,0.12),transparent_35%),linear-gradient(135deg,${isHomecoming ? '#120003_0%,#30030a_38%,#4a0612_65%,#120003_100%' : '#1a0408_0%,#2c0710_38%,#3e0d19_65%,#0a1a0d_100%'})]`} />
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: isHomecoming
+                ? 'radial-gradient(circle at top, rgba(13,2,4,0.12), transparent 35%), linear-gradient(135deg, #120003 0%, #30030a 38%, #4a0612 65%, #120003 100%)'
+                : 'radial-gradient(circle at top, rgba(226,133,110,0.12), transparent 35%), linear-gradient(135deg, #1a0408 0%, #2c0710 38%, #3e0d19 65%, #1a0408 100%)'
+            }}
+          />
 
           {/* Soft ambient glow */}
           <motion.div
